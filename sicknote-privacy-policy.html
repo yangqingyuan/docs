@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy · 隐私政策 - SickNote</title>
+  <style>
+    :root {
+      --primary: #178F79;
+      --primary-light: #3ED2BC;
+      --text: #2b2f33;
+      --text-secondary: #6b7280;
+      --bg: #f4fbf9;
+      --card: #ffffff;
+      --border: #e2efe9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: linear-gradient(135deg, #3ED2BC, #178F79);
+      color: #fff;
+      padding: 40px 20px 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 700; }
+    header p { margin-top: 8px; font-size: 13px; opacity: 0.9; }
+    .lang-switch {
+      margin-top: 16px;
+      display: inline-flex;
+      background: rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-switch button.active { background: #fff; color: var(--primary); font-weight: 600; }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 17px; color: var(--primary); margin-bottom: 10px; }
+    p, li { font-size: 14px; color: var(--text); }
+    li { margin-left: 20px; margin-bottom: 4px; }
+    .updated { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; font-size: 12px; color: var(--text-secondary); }
+    .en { display: none; }
+    body.lang-en .en { display: block; }
+    body.lang-en .zh { display: none; }
+    body.lang-en header p.updated-en, body.lang-zh header p.updated-zh { display: block; }
+  </style>
+</head>
+<body class="lang-en">
+  <header>
+    <h1><span class="zh">SickNote 隐私政策</span><span class="en">SickNote Privacy Policy</span></h1>
+    <p class="zh">你的数据只属于你</p>
+    <p class="en">Your data belongs to you</p>
+    <div class="lang-switch">
+      <button id="btn-en" class="active">English</button>
+      <button id="btn-zh">中文</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2 class="zh">一、概述</h2>
+      <h2 class="en">1. Overview</h2>
+      <p class="zh">SickNote（以下简称"本应用"）是一款用于记录个人健康信息（如生病记录、用药提醒、常去医院等）的本地工具类应用。</p>
+      <p class="zh"><strong>你在本应用内输入的健康记录数据仅保存在你自己的设备中</strong>，本应用不会收集、上传或共享你的健康记录。为维持应用免费运营，本应用接入第三方广告服务（Google AdMob），广告 SDK 可能按其隐私政策收集常规设备信息（详见"第三方服务"章节）。</p>
+      <p class="en">SickNote ("the App") is a local utility app for recording personal health information such as sick records, medication reminders, and frequently visited hospitals.</p>
+      <p class="en"><strong>Health records you enter in the App are stored only on your own device</strong>; the App never collects, uploads, or shares them. To keep the App free, it shows ads served by a third party (Google AdMob), whose SDK may collect routine device information under its own privacy policy (see "Third-Party Services" below).</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">二、我们收集哪些信息</h2>
+      <h2 class="en">2. What Information We Collect</h2>
+      <p class="zh"><strong>我们不收集你的健康记录数据。</strong>具体包括：</p>
+      <ul class="zh">
+        <li>不收集你的姓名、联系方式、位置等个人信息；你的健康记录数据不离开你的设备；</li>
+        <li>应用内无统计 SDK、无追踪服务；广告由 Google AdMob 提供，其 SDK 可能收集设备广告标识符等常规信息（见"第三方服务"章节）；</li>
+        <li>无账号注册、无云同步、无云端存储；</li>
+        <li>应用仅在加载广告时需要联网，不会向任何服务器发送你的健康记录数据。</li>
+      </ul>
+      <p class="en"><strong>We do not collect your health records.</strong> Specifically:</p>
+      <ul class="en">
+        <li>No name, contact details, or location are collected; your health records never leave your device;</li>
+        <li>No analytics SDKs or tracking services; ads are served by Google AdMob, whose SDK may collect routine information such as the advertising ID (see "Third-Party Services");</li>
+        <li>No account registration, no cloud sync, no cloud storage;</li>
+        <li>The app only needs internet access to load ads; it never sends your health records to any server.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">三、数据如何存储</h2>
+      <h2 class="en">3. How Your Data Is Stored</h2>
+      <p class="zh">你在本应用内创建的数据（生病记录、用药提醒）仅保存在你设备的本地数据库中。卸载应用或清除应用数据将永久删除这些内容，请谨慎操作，并建议定期使用应用内的"备份与恢复"功能导出备份文件。</p>
+      <p class="en">All data you create in the app (sick records, medication reminders, hospital info) is stored only in the local database on your device. Uninstalling the app or clearing its data will permanently delete this content. We recommend exporting backup files regularly via the built-in Backup &amp; Restore feature.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">四、权限使用说明</h2>
+      <h2 class="en">4. Permissions</h2>
+      <ul class="zh">
+        <li><strong>网络权限（INTERNET）</strong>：仅用于加载应用内的第三方广告内容，不会传输你的健康记录数据。</li>
+        <li><strong>通知权限（POST_NOTIFICATIONS）</strong>：仅用于在设定的时间提醒你服药。如拒绝，应用其他功能不受影响，但用药提醒将无法弹出通知。</li>
+        <li><strong>开机自启动（RECEIVE_BOOT_COMPLETED）</strong>：仅用于设备重启后恢复尚未执行的用药提醒闹钟，不涉及任何数据读取。</li>
+      </ul>
+      <ul class="en">
+        <li><strong>Internet (INTERNET)</strong>: used solely to load third-party ad content in the App; it never transmits your health records.</li>
+        <li><strong>Notifications (POST_NOTIFICATIONS)</strong>: used solely to remind you to take medication at scheduled times. If denied, all other features still work, but medication reminders will not appear.</li>
+        <li><strong>Boot completed (RECEIVE_BOOT_COMPLETED)</strong>: used only to re-schedule pending medication alarms after a device restart. No data is read.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">五、备份与导出</h2>
+      <h2 class="en">5. Backup &amp; Export</h2>
+      <p class="zh">应用内的"导出备份"会将你的数据生成本地 JSON 文件，由你自行保存；"导入备份"仅在你主动选择文件时读取该文件。备份文件的保管责任由你自行承担，请勿将包含敏感健康信息的备份文件分享给他人。</p>
+      <p class="en">The "Export Backup" feature generates a local JSON file for you to keep; "Import Backup" reads a file only when you choose it. You are responsible for keeping backup files safe — do not share backups containing sensitive health information with others.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、第三方服务</h2>
+      <h2 class="en">6. Third-Party Services</h2>
+      <p class="zh">本应用使用 <strong>Google AdMob 广告服务</strong>（由 Google LLC 提供）来展示广告，以维持应用免费运营。为展示广告，AdMob SDK 可能收集并使用以下常规信息：设备广告标识符（Advertising ID）、设备型号与系统版本、网络状态、IP 地址等，用于广告投放、频次控制与效果统计。</p>
+      <p class="zh">你可以随时在系统设置中"重置广告 ID"或关闭"个性化广告"，这不会影响本应用的其他功能。上述信息的处理遵循 Google 隐私政策（policies.google.com/privacy）。除广告服务外，本应用不包含其他第三方 SDK。应用商店分发平台（如 Google Play）可能出于平台运营目的收集的常规信息，与其各自的隐私政策有关。</p>
+      <p class="en">The App uses the <strong>Google AdMob advertising service</strong> (provided by Google LLC) to display ads and keep the App free. To serve ads, the AdMob SDK may collect and use routine information such as the advertising ID, device model and OS version, network state, and IP address, for ad delivery, frequency capping, and performance measurement.</p>
+      <p class="en">You can reset your advertising ID or disable personalized ads at any time in your device settings; this does not affect any other functionality of the App. Such data is handled according to Google's privacy policy (policies.google.com/privacy). Apart from the ad service, the App contains no other third-party SDKs. Routine information collected by app stores (e.g., Google Play) for platform operation is governed by their own privacy policies.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">七、儿童隐私</h2>
+      <h2 class="en">7. Children's Privacy</h2>
+      <p class="zh">本应用面向所有年龄段的普通用户，但由于不收集任何个人数据，我们不存在针对儿童的数据收集行为。</p>
+      <p class="en">This app is for all general users. Since we do not collect any personal data, there is no data collection targeting children.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">八、政策变更</h2>
+      <h2 class="en">8. Changes to This Policy</h2>
+      <p class="zh">如本隐私政策发生变更，我们将在本页面更新内容并标注新的更新日期。若未来本应用新增任何数据收集功能，我们会提前通过应用内说明或应用商店更新日志等方式告知。</p>
+      <p class="en">If this policy changes, we will update this page and revise the date above. If the app ever adds any data collection feature, we will inform you in advance via in-app notices or store release notes.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">九、联系我们</h2>
+      <h2 class="en">9. Contact Us</h2>
+      <p class="zh">如你对本隐私政策有任何疑问，欢迎发送邮件至：<a href="mailto:455647783@qq.com">455647783@qq.com</a>。</p>
+      <p class="en">If you have any questions about this policy, email us at <a href="mailto:455647783@qq.com">455647783@qq.com</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="zh">© 2026 SickNote · <a href="sicknote-terms-of-service.html">用户协议</a></span>
+    <span class="en">© 2026 SickNote · <a href="sicknote-terms-of-service.html">Terms of Service</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      var zhBtn = document.getElementById('btn-zh');
+      var enBtn = document.getElementById('btn-en');
+      function apply(lang) {
+        document.body.className = 'lang-' + lang;
+        zhBtn.classList.toggle('active', lang === 'zh');
+        enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('hr-lang', lang); } catch (e) {}
+      }
+      zhBtn.addEventListener('click', function () { apply('zh'); });
+      enBtn.addEventListener('click', function () { apply('en'); });
+      var saved = null;
+      try { saved = localStorage.getItem('hr-lang'); } catch (e) {}
+      if (saved === 'zh' || saved === 'en') {
+        apply(saved);
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0) {
+        apply('zh');
+      }
+    })();
+  </script>
+</body>
+</html>
