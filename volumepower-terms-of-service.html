@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>用户协议 · Terms of Service - 音量亮屏</title>
+  <style>
+    :root {
+      --primary: #B42318;
+      --primary-light: #FFB4AB;
+      --text: #2b2f33;
+      --text-secondary: #6b7280;
+      --bg: #fdf6f5;
+      --card: #ffffff;
+      --border: #f2e2e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: linear-gradient(135deg, #FFB4AB, #B42318);
+      color: #fff;
+      padding: 40px 20px 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 700; }
+    header p { margin-top: 8px; font-size: 13px; opacity: 0.92; }
+    .lang-switch {
+      margin-top: 16px;
+      display: inline-flex;
+      background: rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-switch button.active { background: #fff; color: var(--primary); font-weight: 600; }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 17px; color: var(--primary); margin-bottom: 10px; }
+    p, li { font-size: 14px; color: var(--text); }
+    li { margin-left: 20px; margin-bottom: 4px; }
+    .updated { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; font-size: 12px; color: var(--text-secondary); }
+    .en { display: none; }
+    body.lang-en .en { display: block; }
+    body.lang-en .zh { display: none; }
+    body.lang-en header p.updated-en, body.lang-zh header p.updated-zh { display: block; }
+  </style>
+</head>
+<body class="lang-zh">
+  <header>
+    <h1><span class="zh">音量亮屏 用户协议</span><span class="en">Volume Power Terms of Service</span></h1>
+    <p class="zh">使用前请阅读</p>
+    <p class="en">Please read before use</p>
+    <div class="lang-switch">
+      <button id="btn-en">English</button>
+      <button id="btn-zh" class="active">中文</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2 class="zh">一、协议接受</h2>
+      <h2 class="en">1. Acceptance of Terms</h2>
+      <p class="zh">下载、安装或使用音量亮屏（以下简称"本应用"），即表示你已阅读并同意本协议的全部条款。如果你不同意本协议，请停止使用本应用。</p>
+      <p class="en">By downloading, installing, or using Volume Power ("the App"), you agree to be bound by all the terms of this agreement. If you do not agree, please stop using the app.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">二、服务说明</h2>
+      <h2 class="en">2. Service Description</h2>
+      <p class="zh">本应用是一款锁屏工具，核心功能为：锁屏时按音量键点亮屏幕。为实现该功能，应用会以后台前台服务方式常驻运行，并监听屏幕开关与音量键广播；屏幕熄灭时以极低功耗静音音频保活。为维持免费运营，应用内展示由第三方（Google AdMob）提供的广告，广告内容与行为遵循其所属广告商的条款。</p>
+      <p class="en">The App is a screen-lock utility whose core feature is lighting up the screen with the volume keys while the device is locked. To deliver this feature, the App runs as a persistent foreground service and listens to screen and volume-key broadcasts; it uses a low-power silent audio keep-alive while the screen is off. To keep the App free, ads are served by a third party (Google AdMob); ad content and behavior are subject to the terms of the respective advertisers.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">三、权限与功能说明</h2>
+      <h2 class="en">3. Permissions and Features</h2>
+      <ul class="zh">
+        <li><strong>通知栏锁屏：</strong>该功能需要设备管理员权限，仅在用户主动授权后可用，用于执行一键熄屏。</li>
+        <li><strong>开机自启：</strong>开机后自动恢复后台服务，可在设置中关闭。</li>
+        <li><strong>免打扰时间段：</strong>设定的时间段内不触发亮屏，避免打扰休息。</li>
+        <li>以上权限与功能均以"为用户提供服务"为目的，不用于收集或利用用户数据。</li>
+      </ul>
+      <ul class="en">
+        <li><strong>Lock screen from notification:</strong> requires the device-administrator permission, granted only by your explicit action, and is used solely to turn off the screen.</li>
+        <li><strong>Auto-start on boot:</strong> restores the background service after reboot; can be disabled in Settings.</li>
+        <li><strong>Do-not-disturb time ranges:</strong> the screen is not woken during the configured ranges to avoid disturbing your rest.</li>
+        <li>All permissions and features above serve the purpose of providing the service and are never used to collect or exploit user data.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">四、免责声明</h2>
+      <h2 class="en">4. Disclaimer</h2>
+      <ul class="zh">
+        <li>亮屏功能依赖系统广播与硬件状态，因设备厂商限制、省电策略、系统更新等原因可能导致功能失效或延迟，本应用不保证功能绝对可用与及时。</li>
+        <li>本应用为辅助工具，用户因使用或无法使用本应用产生的任何直接或间接损失，开发者不承担责任。</li>
+        <li>本应用按"原样"提供，不承诺服务永不中断或无错误。</li>
+      </ul>
+      <ul class="en">
+        <li>The screen-lighting feature relies on system broadcasts and hardware state. Device-vendor restrictions, battery-saving policies, or system updates may cause failure or delay; the App does not guarantee absolute availability or timeliness.</li>
+        <li>The App is an auxiliary tool. The developer is not liable for any direct or indirect loss arising from the use or inability to use the App.</li>
+        <li>The App is provided "as is" without warranty of uninterrupted or error-free operation.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">五、用户责任</h2>
+      <h2 class="en">5. User Responsibilities</h2>
+      <ul class="zh">
+        <li>你不得利用本应用从事任何违反法律法规的活动；</li>
+        <li>你应自行评估是否授权设备管理员、通知等权限，并在不需要时及时关闭；</li>
+        <li>你应知悉持续后台运行会消耗少量电量，并自行权衡使用。</li>
+      </ul>
+      <ul class="en">
+        <li>You must not use the App for any unlawful activity;</li>
+        <li>You should decide whether to grant permissions such as device administrator and notifications, and revoke them when no longer needed;</li>
+        <li>You acknowledge that the persistent background service consumes a small amount of battery and should use it at your discretion.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、知识产权</h2>
+      <h2 class="en">6. Intellectual Property</h2>
+      <p class="zh">本应用的全部代码、界面、图标及相关内容的知识产权归开发者所有。未经许可，不得复制、修改、传播或用于商业用途。</p>
+      <p class="en">All code, UI, icons, and related content of the App are owned by the developer. You may not copy, modify, distribute, or commercially use them without permission.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">七、协议变更</h2>
+      <h2 class="en">7. Changes to These Terms</h2>
+      <p class="zh">我们可能根据产品与法规变化适时更新本协议，更新后的条款将在本页面发布并标注新的更新日期。继续使用本应用即视为接受更新后的条款。</p>
+      <p class="en">We may update these terms from time to time. Revised terms will be posted on this page with a new date. Continued use of the App constitutes acceptance of the updated terms.</p>
+      <p class="updated zh">最后更新：2026 年 8 月 30 日</p>
+      <p class="updated en">Last updated: August 30, 2026</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">八、联系我们</h2>
+      <h2 class="en">8. Contact Us</h2>
+      <p class="zh">如对本协议有任何疑问，请发送邮件至：<a href="mailto:455647783@qq.com">455647783@qq.com</a>。</p>
+      <p class="en">If you have any questions about these terms, email us at <a href="mailto:455647783@qq.com">455647783@qq.com</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="zh">© 2026 音量亮屏 · <a href="volumepower-privacy-policy.html">隐私政策</a></span>
+    <span class="en">© 2026 Volume Power · <a href="volumepower-privacy-policy.html">Privacy Policy</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      var zhBtn = document.getElementById('btn-zh');
+      var enBtn = document.getElementById('btn-en');
+      function apply(lang) {
+        document.body.className = 'lang-' + lang;
+        zhBtn.classList.toggle('active', lang === 'zh');
+        enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('vp-lang', lang); } catch (e) {}
+      }
+      zhBtn.addEventListener('click', function () { apply('zh'); });
+      enBtn.addEventListener('click', function () { apply('en'); });
+      var saved = null;
+      try { saved = localStorage.getItem('vp-lang'); } catch (e) {}
+      if (saved === 'zh' || saved === 'en') {
+        apply(saved);
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0) {
+        apply('zh');
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>隐私政策 · Privacy Policy - 音量亮屏</title>
+  <style>
+    :root {
+      --primary: #B42318;
+      --primary-light: #FFB4AB;
+      --text: #2b2f33;
+      --text-secondary: #6b7280;
+      --bg: #fdf6f5;
+      --card: #ffffff;
+      --border: #f2e2e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: linear-gradient(135deg, #FFB4AB, #B42318);
+      color: #fff;
+      padding: 40px 20px 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 700; }
+    header p { margin-top: 8px; font-size: 13px; opacity: 0.92; }
+    .lang-switch {
+      margin-top: 16px;
+      display: inline-flex;
+      background: rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-switch button.active { background: #fff; color: var(--primary); font-weight: 600; }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 17px; color: var(--primary); margin-bottom: 10px; }
+    p, li { font-size: 14px; color: var(--text); }
+    li { margin-left: 20px; margin-bottom: 4px; }
+    .updated { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; font-size: 12px; color: var(--text-secondary); }
+    .en { display: none; }
+    body.lang-en .en { display: block; }
+    body.lang-en .zh { display: none; }
+    body.lang-en header p.updated-en, body.lang-zh header p.updated-zh { display: block; }
+  </style>
+</head>
+<body class="lang-zh">
+  <header>
+    <h1><span class="zh">音量亮屏 隐私政策</span><span class="en">Volume Power Privacy Policy</span></h1>
+    <p class="zh">你的数据只留在你的设备上</p>
+    <p class="en">Your data stays on your device</p>
+    <div class="lang-switch">
+      <button id="btn-en">English</button>
+      <button id="btn-zh" class="active">中文</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2 class="zh">一、我们收集的信息</h2>
+      <h2 class="en">1. Information We Collect</h2>
+      <p class="zh">本应用为纯本地工具，<strong>不收集、不上传任何个人身份信息</strong>。我们不会要求你注册账号，也不会收集你的姓名、手机号、通讯录、位置等信息。你在应用内产生的所有数据（如运行时长统计）均仅存储在你设备本地。</p>
+      <p class="en">The App is a fully local utility. We <strong>do not collect or upload any personally identifiable information</strong>. No account is required, and we do not collect your name, phone number, contacts, or location. All data generated in the app (e.g., running-time statistics) is stored locally on your device only.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">二、数据存储与安全</h2>
+      <h2 class="en">2. Data Storage and Security</h2>
+      <p class="zh">运行时长统计、开关状态等数据以本地存储的方式保存在你的设备中（SharedPreferences 文件），不会被传输到任何服务器。卸载应用后，相关本地数据将被一并清除。</p>
+      <p class="en">Running-time statistics and switch states are stored locally on your device (SharedPreferences) and are never transmitted to any server. Uninstalling the app removes all related local data.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">三、权限使用说明</h2>
+      <h2 class="en">3. Permissions We Use</h2>
+      <ul class="zh">
+        <li><strong>通知权限：</strong>用于在前台服务中显示常驻状态通知，并支持从通知栏一键锁屏。</li>
+        <li><strong>设备管理员权限：</strong>用于执行「通知栏一键锁屏」，仅在用户主动授权后使用。</li>
+        <li><strong>开机自启（BOOT_COMPLETED）：</strong>用于开机后按用户设置恢复后台服务（可在设置中关闭）。</li>
+        <li><strong>电池优化白名单：</strong>防止系统在息屏后清理后台服务，保障功能稳定（可选择性开启）。</li>
+      </ul>
+      <ul class="en">
+        <li><strong>Notifications:</strong> to show the persistent foreground-service notification and enable one-tap screen lock from the notification shade.</li>
+        <li><strong>Device Administrator:</strong> to perform "lock screen from notification"; used only after you grant it explicitly.</li>
+        <li><strong>Boot completed:</strong> to restore the background service after reboot according to your setting (can be disabled in Settings).</li>
+        <li><strong>Battery optimization whitelist:</strong> to prevent the system from killing the background service after screen-off (optional).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">四、第三方 SDK（广告）</h2>
+      <h2 class="en">4. Third-Party SDK (Ads)</h2>
+      <p class="zh">为维持免费运营，本应用集成了 Google AdMob 广告 SDK。该 SDK 可能依据其自身的隐私政策收集设备广告标识符（如 AAID）等信息，用于展示与衡量广告。广告相关数据的处理遵循 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私政策</a>，本应用不会向广告 SDK 提供你的任何个人身份信息。</p>
+      <p class="en">To keep the App free, it integrates the Google AdMob advertising SDK. The SDK may collect advertising identifiers (e.g., AAID) and related information for serving and measuring ads, in accordance with its own privacy policy. Ad-related data handling follows the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. We do not provide the ad SDK with any personally identifiable information about you.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">五、儿童隐私</h2>
+      <h2 class="en">5. Children's Privacy</h2>
+      <p class="zh">本应用不面向 13 周岁以下儿童，也不会故意收集儿童的个人信息。</p>
+      <p class="en">The App is not directed to children under 13 and does not knowingly collect personal information from children.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、政策变更</h2>
+      <h2 class="en">6. Changes to This Policy</h2>
+      <p class="zh">我们可能根据产品与法规变化适时更新本政策，更新后的内容将在本页面发布并标注新的更新日期。继续使用本应用即视为接受更新后的政策。</p>
+      <p class="en">We may update this policy from time to time. Revised content will be posted on this page with a new date. Continued use of the App constitutes acceptance of the updated policy.</p>
+      <p class="updated zh">最后更新：2026 年 8 月 30 日</p>
+      <p class="updated en">Last updated: August 30, 2026</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">七、联系我们</h2>
+      <h2 class="en">7. Contact Us</h2>
+      <p class="zh">如对本政策有任何疑问，请发送邮件至：<a href="mailto:455647783@qq.com">455647783@qq.com</a>。</p>
+      <p class="en">If you have any questions about this policy, email us at <a href="mailto:455647783@qq.com">455647783@qq.com</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="zh">© 2026 音量亮屏 · <a href="volumepower-terms-of-service.html">用户协议</a></span>
+    <span class="en">© 2026 Volume Power · <a href="volumepower-terms-of-service.html">Terms of Service</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      var zhBtn = document.getElementById('btn-zh');
+      var enBtn = document.getElementById('btn-en');
+      function apply(lang) {
+        document.body.className = 'lang-' + lang;
+        zhBtn.classList.toggle('active', lang === 'zh');
+        enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('vp-lang', lang); } catch (e) {}
+      }
+      zhBtn.addEventListener('click', function () { apply('zh'); });
+      enBtn.addEventListener('click', function () { apply('en'); });
+      var saved = null;
+      try { saved = localStorage.getItem('vp-lang'); } catch (e) {}
+      if (saved === 'zh' || saved === 'en') {
+        apply(saved);
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0) {
+        apply('zh');
+      }
+    })();
+  </script>
+</body>
+</html>
