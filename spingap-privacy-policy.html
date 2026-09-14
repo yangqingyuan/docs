@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="SpinGap privacy policy: what the app stores, which permissions it uses, and your rights.">
+  <title>Privacy Policy · 隐私政策 - SpinGap</title>
+  <style>
+    :root {
+      --primary: #6C8CFF;
+      --primary-soft: #B9C6FF;
+      --primary-deep: #5872E8;
+      --green: #7CFFB2;
+      --text: #F2F2F7;
+      --text-secondary: #8A8A99;
+      --text-mute: #55555F;
+      --bg: #0E0E12;
+      --bg-deep: #07070A;
+      --card: #17171F;
+      --card-2: #1F1F2A;
+      --line: rgba(255, 255, 255, .08);
+      --line-2: rgba(255, 255, 255, .16);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+    }
+    header {
+      background:
+        radial-gradient(120% 90% at 50% 0%, rgba(108, 140, 255, .34), rgba(7, 7, 10, 0) 62%),
+        linear-gradient(180deg, #14141C, var(--bg-deep));
+      border-bottom: 1px solid var(--line);
+      padding: 44px 20px 30px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 800; letter-spacing: .02em; }
+    header p { margin-top: 8px; font-size: 13px; color: var(--text-secondary); }
+    header p.date { font-size: 11px; color: var(--text-mute); margin-top: 4px; }
+    .lang-switch {
+      margin-top: 18px;
+      display: inline-flex;
+      background: rgba(255, 255, 255, .07);
+      box-shadow: inset 0 0 0 1px var(--line-2);
+      border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 13px;
+      padding: 6px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color .16s, background .16s;
+    }
+    .lang-switch button.active {
+      background: linear-gradient(180deg, #7C9BFF, var(--primary-deep));
+      color: #fff;
+      font-weight: 700;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 64px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 14px;
+    }
+    .card.hl {
+      background: linear-gradient(180deg, rgba(108, 140, 255, .12), rgba(108, 140, 255, .03));
+      border-color: rgba(108, 140, 255, .34);
+    }
+    h2 {
+      font-size: 16.5px;
+      color: var(--primary-soft);
+      margin-bottom: 10px;
+      letter-spacing: .01em;
+    }
+    h3 { font-size: 14px; color: var(--text); margin: 14px 0 6px; }
+    p, li { font-size: 14px; color: var(--text); }
+    p + p { margin-top: 8px; }
+    ul { margin-top: 6px; }
+    li { margin-left: 20px; margin-bottom: 5px; }
+    strong { color: #fff; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12.5px;
+      background: var(--card-2);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 1px 5px;
+      color: var(--primary-soft);
+      word-break: break-all;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+    th, td {
+      text-align: left;
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th { color: var(--text-secondary); font-weight: 600; font-size: 12px; }
+    tr:last-child td { border-bottom: none; }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 1px 8px;
+      border-radius: 999px;
+      background: rgba(124, 255, 178, .14);
+      color: var(--green);
+      box-shadow: inset 0 0 0 1px rgba(124, 255, 178, .32);
+      white-space: nowrap;
+    }
+    .tag.no {
+      background: rgba(255, 92, 108, .12);
+      color: #FF8A96;
+      box-shadow: inset 0 0 0 1px rgba(255, 92, 108, .3);
+    }
+    .note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--primary);
+      background: var(--card-2);
+      border-radius: 0 10px 10px 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .scroll { overflow-x: auto; }
+    footer {
+      text-align: center;
+      padding: 24px 20px 40px;
+      font-size: 12px;
+      color: var(--text-mute);
+      border-top: 1px solid var(--line);
+    }
+    footer a { color: var(--text-secondary); }
+    /* 双语切换：默认藏 en，body.lang-en 时反过来。
+       表格单元必须显式还原为 table-cell / table-row，否则 display:block 会把表格拆掉。 */
+    .en { display: none; }
+    body.lang-en .zh { display: none; }
+    body.lang-en .en { display: block; }
+    body.lang-en span.en { display: inline; }
+    body.lang-en table.en { display: table; }
+    body.lang-en thead.en { display: table-header-group; }
+    body.lang-en tbody.en { display: table-row-group; }
+    body.lang-en tr.en { display: table-row; }
+    body.lang-en th.en,
+    body.lang-en td.en { display: table-cell; }
+    body.lang-en ul.en { display: block; }
+    body.lang-en li.en { display: list-item; }
+  </style>
+</head>
+<body class="lang-en">
+  <header>
+    <h1><span class="zh">SpinGap 隐私政策</span><span class="en">SpinGap Privacy Policy</span></h1>
+    <p class="zh">你的进度只留在你自己的设备上</p>
+    <p class="en">Your progress never leaves your device</p>
+    <p class="zh date">最后更新：2026 年 9 月 13 日 · 生效日期：2026 年 9 月 13 日</p>
+    <p class="en date">Last updated: September 13, 2026 · Effective: September 13, 2026</p>
+    <div class="lang-switch">
+      <button id="btn-en" class="active">English</button>
+      <button id="btn-zh">中文</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card hl">
+      <h2 class="zh">一句话总结</h2>
+      <h2 class="en">The Short Version</h2>
+      <p class="zh">SpinGap（包名 <code>com.guanren.spingap</code>，以下简称"本应用"）是一款单机益智游戏。本应用<strong>不要求注册账号、不收集你的姓名、手机号、邮箱、位置、通讯录、照片或任何可直接识别你身份的信息</strong>，也不需要这些权限。你的游玩进度（关卡解锁、星数、皮肤、音效与震动开关）<strong>只保存在你手机的应用私有目录里</strong>。本应用不运营任何自有服务器，没有云端存档，也没有排行榜。</p>
+      <p class="zh">为让游戏保持免费，应用内会展示第三方广告（Google AdMob）。这些广告 SDK 会按行业惯例收集设备广告标识符等用于投放与计量的信息，详见<a href="#third-party">第五章</a>。</p>
+      <p class="en">SpinGap ("the App", package <code>com.guanren.spingap</code>) is an offline puzzle game. The App <strong>requires no account and collects no name, phone number, email, location, contacts, photos, or any other personally identifying information</strong>, and it does not request those permissions. Your progress (level unlocks, stars, ball skin, sound and haptics toggles) is <strong>stored only in the App's private storage on your own phone</strong>. The App runs no server of its own, has no cloud saves, and has no leaderboard.</p>
+      <p class="en">To keep the game free, third-party ads (Google AdMob) are shown in the App. Those ad SDKs collect standard information such as the advertising ID for delivery and measurement — see <a href="#third-party">Section 5</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">一、适用范围</h2>
+      <h2 class="en">1. Scope</h2>
+      <p class="zh">本政策说明本应用在你的设备上读写哪些数据、申请哪些权限，以及你对自己的数据拥有哪些权利。本政策仅适用于 SpinGap 应用本体，不适用于你通过系统浏览器打开的第三方网站（如广告落地页或应用商店页面），那些网站适用它们各自的隐私政策。</p>
+      <p class="en">This policy explains what data the App reads and writes on your device, which permissions it uses, and what rights you have over your own data. It applies only to the SpinGap app itself, not to third-party websites you open through your browser (such as ad landing pages or store listings), which are governed by their own privacy policies.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">二、我们收集哪些信息</h2>
+      <h2 class="en">2. What Information We Collect</h2>
+      <p class="zh"><strong>我们不收集你的个人数据，也不向开发者服务器上传任何内容（本应用没有开发者服务器）。</strong>具体来说：</p>
+      <ul class="zh">
+        <li>不收集姓名、手机号、邮箱、身份证件、地址等身份信息；</li>
+        <li>不读取位置、通讯录、短信、通话记录、相册、文件；</li>
+        <li>不使用麦克风、摄像头；</li>
+        <li>不内置统计分析 SDK、崩溃上报 SDK，不做用户画像，不跨应用追踪你；</li>
+        <li>没有账号体系、没有云同步、没有排行榜、没有社交分享；</li>
+        <li>唯一的对外网络请求来自广告服务（第五章）。</li>
+      </ul>
+      <p class="en"><strong>We do not collect your personal data and we upload nothing to a developer server (the App has no developer server).</strong> Specifically:</p>
+      <ul class="en">
+        <li>No name, phone number, email, identity document, or address;</li>
+        <li>No access to location, contacts, SMS, call logs, photo library, or files;</li>
+        <li>No microphone or camera use;</li>
+        <li>No analytics SDK, no crash-reporting SDK, no profiling, no cross-app tracking;</li>
+        <li>No accounts, no cloud sync, no leaderboard, no social sharing;</li>
+        <li>The only outbound network traffic comes from the ad service (Section 5).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">三、本应用会存哪些数据（全部只在本机）</h2>
+      <h2 class="en">3. What the App Stores (All Local)</h2>
+      <p class="zh">这些数据存放在 Android 应用私有目录的 DataStore 文件中（文件名 <code>aa_save</code>），其他应用无法读取。卸载应用或"清除应用数据"即全部删除。</p>
+      <p class="en">This data lives in a DataStore file named <code>aa_save</code> inside the App's private directory on Android, unreadable by other apps. Uninstalling the App or clearing its data deletes all of it.</p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="zh">存储内容</th>
+              <th class="zh">用途</th>
+              <th class="en">Stored item</th>
+              <th class="en">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="zh">已解锁关卡、每关星数</td>
+              <td class="zh">恢复游戏进度</td>
+              <td class="en">Level unlocks, stars per level</td>
+              <td class="en">Restore your progress</td>
+            </tr>
+            <tr>
+              <td class="zh">当前球体皮肤</td>
+              <td class="zh">记住你选的外观</td>
+              <td class="en">Selected ball skin</td>
+              <td class="en">Remember your look</td>
+            </tr>
+            <tr>
+              <td class="zh">无限模式最佳连续过关数</td>
+              <td class="zh">展示个人最好成绩</td>
+              <td class="en">Best endless streak</td>
+              <td class="en">Show your personal best</td>
+            </tr>
+            <tr>
+              <td class="zh">音效开关、震动开关</td>
+              <td class="zh">记住设置偏好</td>
+              <td class="en">Sound and haptics toggles</td>
+              <td class="en">Remember your preferences</td>
+            </tr>
+            <tr>
+              <td class="zh">教程已看过标记、合规同意标记、评分提示已弹过标记</td>
+              <td class="zh">避免重复打扰你</td>
+              <td class="en">Tutorial seen, consent given, rate prompt shown flags</td>
+              <td class="en">Avoid nagging you repeatedly</td>
+            </tr>
+            <tr>
+              <td class="zh">本地计数：开局次数、失败次数</td>
+              <td class="zh">仅作本机累计记录，<strong>不上传，也不用于任何其他用途</strong></td>
+              <td class="en">Local counters: plays, fails</td>
+              <td class="en">Recorded locally only, <strong>never uploaded and never used otherwise</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note zh">以上全部内容都不含任何身份信息 —— 我们即便想看也看不出这些数据属于谁。</div>
+      <div class="note en">None of the above contains identity information — even if we wanted to, we could not tell whose data it is.</div>
+      <p class="zh">另外，若你在系统设置中开启 Android 自动备份（默认开启），上述数据可能由<strong>操作系统</strong>备份到你的 Google 账号云端硬盘，卸载后重装可自动恢复。这由 Android 系统执行、由你控制，可在"设置 → 系统 → 备份"中关闭或删除。应用本身不参与该备份，也无法读取你的云端备份。</p>
+      <p class="en">Separately, if Android Auto Backup is enabled in system settings (on by default), the data above may be backed up by the <strong>operating system</strong> to your Google account, so it can be restored after reinstalling. This is performed by Android and controlled by you; you can turn it off or delete it in Settings → System → Backup. The App neither performs nor can read that backup.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">四、应用申请的权限及用途</h2>
+      <h2 class="en">4. Permissions and Why</h2>
+      <p class="zh">本应用<strong>自身代码不主动申请任何权限</strong>。你在系统"应用权限"页面看到的权限，全部来自集成进来的第三方库（主要是广告 SDK）在构建时自动合并的声明：</p>
+      <p class="en">The App's <strong>own code requests no permissions at all</strong>. Every permission you see on the system App-permissions screen comes from declarations merged in automatically by the third-party libraries it uses (chiefly the ad SDK) at build time:</p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="zh">权限</th>
+              <th class="zh">谁在用 / 用来干什么</th>
+              <th class="en">Permission</th>
+              <th class="en">Used by / for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>INTERNET</code></td>
+              <td class="zh">广告 SDK：向广告服务器请求广告内容。游戏本体全程离线可玩。</td>
+              <td class="en">Ad SDK: request ad content from the ad server. The game itself is fully playable offline.</td>
+            </tr>
+            <tr>
+              <td><code>ACCESS_NETWORK_STATE</code></td>
+              <td class="zh">广告 SDK：判断当前是否联网，避免离线时反复请求。</td>
+              <td class="en">Ad SDK: check connectivity so it does not retry while offline.</td>
+            </tr>
+            <tr>
+              <td><code>com.google.android.gms.permission.AD_ID</code></td>
+              <td class="zh">广告 SDK：读取设备广告标识符，用于广告投放与频次控制。可在系统"广告"设置中重置或删除。</td>
+              <td class="en">Ad SDK: read the advertising ID for ad delivery and frequency capping. Resettable and deletable in system Ads settings.</td>
+            </tr>
+            <tr>
+              <td><code>ACCESS_ADSERVICES_AD_ID</code><br><code>ACCESS_ADSERVICES_TOPICS</code><br><code>ACCESS_ADSERVICES_ATTRIBUTION</code></td>
+              <td class="zh">广告 SDK：Android 隐私沙盒（Privacy Sandbox）相关权限，用于在不用跨应用标识符的前提下衡量广告效果。</td>
+              <td class="en">Ad SDK: Android Privacy Sandbox permissions, used to measure ads without cross-app identifiers.</td>
+            </tr>
+            <tr>
+              <td><code>WAKE_LOCK</code></td>
+              <td class="zh">广告 SDK：播放广告时短暂保持唤醒，避免加载中熄屏中断。</td>
+              <td class="en">Ad SDK: briefly keep the device awake while an ad is loading.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="zh">本应用明确<em>不</em>申请、也不使用的权限</h3>
+      <h3 class="en">Permissions the App does <em>not</em> request or use</h3>
+      <ul class="zh">
+        <li><span class="tag no">不使用</span> 位置（精确 / 粗略）、后台位置；</li>
+        <li><span class="tag no">不使用</span> 相机、麦克风、录音；</li>
+        <li><span class="tag no">不使用</span> 通讯录、日历、短信、通话记录；</li>
+        <li><span class="tag no">不使用</span> 外部存储读写、照片 / 媒体访问（进度写在应用私有目录，不需要存储权限）；</li>
+        <li><span class="tag no">不使用</span> 后台前台服务、开机自启、悬浮窗、安装其他应用。</li>
+      </ul>
+      <ul class="en">
+        <li><span class="tag no">Not used</span> Location (precise or approximate), background location;</li>
+        <li><span class="tag no">Not used</span> Camera, microphone, audio recording;</li>
+        <li><span class="tag no">Not used</span> Contacts, calendar, SMS, call logs;</li>
+        <li><span class="tag no">Not used</span> External storage or photo/media access (progress is written to private storage, needing no permission);</li>
+        <li><span class="tag no">Not used</span> Foreground services, boot autostart, overlay, installing other apps.</li>
+      </ul>
+      <div class="note zh">关于震动：游戏里的触感反馈调用的是系统内置的轻触觉反馈（<code>performHapticFeedback</code>），<strong>不需要 VIBRATE 权限</strong>，你随时可以在应用设置里关闭，或直接在系统里关闭触感。</div>
+      <div class="note en">On haptics: in-game feedback uses the system's built-in haptic feedback (<code>performHapticFeedback</code>), which <strong>requires no VIBRATE permission</strong>. You can switch it off in the App's settings, or disable touch feedback system-wide.</div>
+    </section>
+
+    <section class="card" id="third-party">
+      <h2 class="zh">五、第三方服务（广告）</h2>
+      <h2 class="en">5. Third-Party Services (Ads)</h2>
+      <p class="zh">本应用集成 <strong>Google AdMob</strong>（Google LLC / Google Ireland Limited）展示横幅广告与插屏广告，以维持免费运营。广告 SDK 可能收集并使用以下常规信息用于投放、频次控制与效果统计：</p>
+      <ul class="zh">
+        <li>设备广告标识符（Advertising ID）；</li>
+        <li>设备型号、操作系统版本、语言与大致地区（由 IP 推断的国家/城市级，非精确定位）；</li>
+        <li>网络状态（Wi-Fi / 移动网络）、IP 地址；</li>
+        <li>广告的展示与点击事件。</li>
+      </ul>
+      <p class="zh">这些信息由 Google 依据其隐私政策处理，不经过我们（本应用没有服务器，我们也拿不到这些数据）。Google 隐私政策：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+      <p class="en">The App integrates <strong>Google AdMob</strong> (Google LLC / Google Ireland Limited) to show banner and interstitial ads and stay free. The ad SDK may collect and use routine information for delivery, frequency capping, and measurement:</p>
+      <ul class="en">
+        <li>Advertising ID;</li>
+        <li>Device model, OS version, language, and coarse region inferred from IP (city/country level, not precise location);</li>
+        <li>Network type (Wi-Fi / mobile) and IP address;</li>
+        <li>Ad impression and click events.</li>
+      </ul>
+      <p class="en">This is handled by Google under its own privacy policy and never passes through us (the App has no server, and we cannot access it). Google privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+
+      <h3 class="zh">广告的展示规则（我们把打扰压到最低）</h3>
+      <h3 class="en">How ads are shown (kept minimal)</h3>
+      <ul class="zh">
+        <li>横幅固定在主菜单、选关页与游戏画面内的固定位置，不遮挡操作区；</li>
+        <li>插屏只在<strong>关卡结算阶段</strong>出现，且第 6 关起才参与、每通关 3 关最多展示 1 次；</li>
+        <li>冷启动后 2 分钟内一律不展示插屏；</li>
+        <li>通关最后一关时<strong>不展示插屏</strong>，把画面留给你；</li>
+        <li>游玩过程中不会无预期弹出广告。</li>
+      </ul>
+      <ul class="en">
+        <li>Banners sit in a fixed position on the main menu, level select, and in-game screen, never covering your controls;</li>
+        <li>Interstitials appear only <strong>at level results</strong>, only from level 6 onward, and at most once per three level clears;</li>
+        <li>No interstitial at all within two minutes of a cold start;</li>
+        <li><strong>No interstitial</strong> when you clear the final level;</li>
+        <li>No unexpected ads mid-play.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、你的权利与怎么行使</h2>
+      <h2 class="en">6. Your Rights and How to Exercise Them</h2>
+      <p class="zh">由于本应用不保存任何可识别你身份的个人数据，最核心的事实是：<strong>你的数据一直在你手里，删除动作你自己就能立刻完成，不需要向我们申请。</strong>下表是逐项对照：</p>
+      <p class="en">Because the App holds no personally identifying data, the key fact is: <strong>your data is already in your hands, and you can delete it yourself, immediately, with no request to us.</strong> Item by item:</p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="zh">你的权利</th>
+              <th class="zh">怎么做</th>
+              <th class="en">Your right</th>
+              <th class="en">How to do it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="zh"><strong>知情权</strong>：知道应用存了什么、用了什么权限</td>
+              <td class="zh">就是本页面（第三、四章）</td>
+              <td class="en"><strong>To know</strong> what is stored and which permissions are used</td>
+              <td class="en">This page (Sections 3 and 4)</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>访问 / 查阅权</strong></td>
+              <td class="zh">进度数据是设备本地文件，无服务器副本可供调取；应用界面即为它的呈现</td>
+              <td class="en"><strong>Access</strong></td>
+              <td class="en">Progress is a local file with no server copy; the App UI is its full presentation</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>删除权（含被遗忘权）</strong>：清空游戏进度</td>
+              <td class="zh">应用内「设置 → 清空游戏进度」（会二次确认）</td>
+              <td class="en"><strong>Erasure</strong> (incl. right to be forgotten): wipe progress</td>
+              <td class="en">In-app Settings → Reset progress (with a confirmation step)</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>删除权</strong>：彻底删除全部本地数据</td>
+              <td class="zh">系统「设置 → 应用 → SpinGap → 存储 → 清除数据」，或直接卸载应用</td>
+              <td class="en"><strong>Erasure</strong>: remove all local data completely</td>
+              <td class="en">System Settings → Apps → SpinGap → Storage → Clear data, or simply uninstall</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>撤回同意 / 关闭个性化广告</strong></td>
+              <td class="zh">系统「设置 → 隐私 → 广告」中重置或删除广告 ID、关闭个性化广告；广告投放偏好由 Google 的广告设置控制</td>
+              <td class="en"><strong>Withdraw consent / opt out of personalized ads</strong></td>
+              <td class="en">System Settings → Privacy → Ads: reset or delete the advertising ID and turn off personalized ads; ad delivery preferences are controlled by Google's Ads settings</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>拒绝权</strong>：不再接收广告</td>
+              <td class="zh">应用本体离线可玩；如不想看到任何广告，卸载即为最终选择</td>
+              <td class="en"><strong>To object</strong>: stop receiving ads</td>
+              <td class="en">The game plays offline; if you never want ads, uninstalling is the ultimate option</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>反对自动化决策 / 画像</strong></td>
+              <td class="zh">我们不进行用户画像，不做自动化决策；广告定向由 Google 完成，可如上关闭</td>
+              <td class="en"><strong>Object to profiling / automated decisions</strong></td>
+              <td class="en">We do no profiling and no automated decision-making; ad targeting is Google's and can be disabled as above</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>数据可携带权</strong></td>
+              <td class="zh">无服务器数据可携带；本地进度由 Android 系统备份能力自行迁移</td>
+              <td class="en"><strong>Portability</strong></td>
+              <td class="en">No server data to port; local progress migrates via Android's backup capability</td>
+            </tr>
+            <tr>
+              <td class="zh"><strong>投诉权</strong></td>
+              <td class="zh">可先邮件联系我们；如不满意，可向所在国家/地区的数据保护监管机构投诉</td>
+              <td class="en"><strong>To complain</strong></td>
+              <td class="en">Email us first; if unresolved, complain to your local data protection authority</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="zh">加州居民（CCPA/CPRA）：我们<strong>不出售、也不共享</strong>你的个人信息（无出售行为、无跨上下文行为广告的数据交换由我们发起）。如你有相关请求，可发邮件至下方地址 —— 虽然我们很可能没有任何关于你的数据可以响应。</p>
+      <p class="en">California residents (CCPA/CPRA): we <strong>do not sell or share</strong> your personal information (we perform no sales, and initiate no cross-context behavioral advertising data exchange). You may still email us with a request — though we most likely hold no data about you to act on.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">七、儿童隐私</h2>
+      <h2 class="en">7. Children's Privacy</h2>
+      <p class="zh">本应用面向 <strong>13 周岁及以上</strong>的一般用户，不面向儿童，也不会在知情情况下收集 13 岁以下儿童（或所在司法辖区规定的相应年龄以下儿童）的信息。首次启动时会明确提示年龄门槛。由于本应用不收集任何个人信息，也不含社交、聊天、用户生成内容或内购，儿童的隐私风险被降到最低。若你作为监护人认为孩子正在使用本应用并希望删除其数据，直接卸载应用或在系统设置中清除应用数据即可。</p>
+      <p class="en">The App is intended for a general audience <strong>aged 13 and over</strong>, is not directed at children, and does not knowingly collect information from children under 13 (or the equivalent age in your jurisdiction). The age threshold is shown at first launch. Since the App collects no personal information and has no social features, chat, user-generated content, or in-app purchases, privacy risk for children is minimal. If you are a guardian and want a child's data removed, just uninstall the App or clear its data in system settings.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">八、数据安全</h2>
+      <h2 class="en">8. Data Security</h2>
+      <p class="zh">本应用产生的数据存放在 Android 应用私有目录，受系统沙箱保护，其他应用无法读取（在未 root 的设备上）。广告请求使用 HTTPS 传输。由于我们根本没有服务器、也没有你的账号，也就不存在"服务器被拖库导致你数据泄露"这种情形。请自行注意：若设备已解锁或借给他人使用，本机进度是可见的。</p>
+      <p class="en">App data lives in Android's private app directory, protected by the system sandbox and unreadable by other apps (on non-rooted devices). Ad requests use HTTPS. Because we run no server and hold no account of yours, there is no scenario in which a server breach exposes your data. Please note: if your device is unlocked or shared, the local progress is visible to whoever uses it.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">九、本政策的变更</h2>
+      <h2 class="en">9. Changes to This Policy</h2>
+      <p class="zh">如本政策发生变更，我们会更新本页面并调整顶部的"最后更新"日期。若未来版本新增任何数据收集功能（例如排行榜、云存档），我们会在上线前更新本政策，并通过应用内提示或应用商店更新说明提前告知，且在法律要求时重新征求你的同意。</p>
+      <p class="en">If this policy changes, we will update this page and revise the "Last updated" date above. If a future version adds any data collection (e.g. a leaderboard or cloud saves), we will update this policy beforehand and notify you through an in-app notice or store release notes, obtaining fresh consent where the law requires it.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">十、联系我们</h2>
+      <h2 class="en">10. Contact Us</h2>
+      <p class="zh">对本政策有任何疑问、或想行使上述任何一项权利，请发邮件至 <a href="mailto:455647783@qq.com">455647783@qq.com</a>。我们会尽力在合理期限内回复。</p>
+      <p class="en">For any question about this policy, or to exercise any right above, email <a href="mailto:455647783@qq.com">455647783@qq.com</a>. We will do our best to reply within a reasonable period.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="zh">© 2026 SpinGap · <a href="spingap-terms-of-service.html">用户协议</a></span>
+    <span class="en">© 2026 SpinGap · <a href="spingap-terms-of-service.html">Terms of Service</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      var zhBtn = document.getElementById('btn-zh');
+      var enBtn = document.getElementById('btn-en');
+      function apply(lang) {
+        document.body.className = 'lang-' + lang;
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        zhBtn.classList.toggle('active', lang === 'zh');
+        enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('spingap-lang', lang); } catch (e) {}
+      }
+      zhBtn.addEventListener('click', function () { apply('zh'); });
+      enBtn.addEventListener('click', function () { apply('en'); });
+      var saved = null;
+      try { saved = localStorage.getItem('spingap-lang'); } catch (e) {}
+      if (saved === 'zh' || saved === 'en') {
+        apply(saved);
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0) {
+        apply('zh');
+      }
+    })();
+  </script>
+</body>
+</html>
