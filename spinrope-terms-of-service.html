@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="SpinRope terms of service: licence, acceptable use, ads, disclaimers, and your rights as a user.">
+  <title>Terms of Service · 用户协议 - SpinRope</title>
+  <style>
+    :root {
+      --soft: #F5A623;
+      --soft-soft: #B5761A;
+      --hard: #3D6DF2;
+      --hard-soft: #2F55C4;
+      --ball-a: #FF6B81;
+      --ball-b: #3EC6C9;
+      --teal-ink: #1F8A8D;
+      --success: #35B47A;
+      --danger: #D64545;
+      --ink: #2B2B33;
+      --ink-soft: #6B655C;
+      --ink-mute: #9B9488;
+      --paper: #F8F4EC;
+      --paper-deep: #EFE8DA;
+      --card: #FFFFFF;
+      --card-2: #F3ECDF;
+      --line: rgba(43, 43, 51, .13);
+      --line-2: rgba(43, 43, 51, .24);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+    }
+    header {
+      background:
+        radial-gradient(120% 90% at 50% 0%, rgba(245, 166, 35, .26), rgba(248, 244, 236, 0) 62%),
+        linear-gradient(180deg, #FFFDF8, var(--paper-deep));
+      border-bottom: 1px solid var(--line);
+      padding: 44px 20px 30px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 800; letter-spacing: .02em; }
+    header p { margin-top: 8px; font-size: 13px; color: var(--ink-soft); }
+    header p.date { font-size: 11px; color: var(--ink-mute); margin-top: 4px; }
+    .lang-switch {
+      margin-top: 18px;
+      display: inline-flex;
+      background: rgba(43, 43, 51, .05);
+      box-shadow: inset 0 0 0 1px var(--line-2);
+      border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: var(--ink-soft);
+      font-size: 13px;
+      padding: 6px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color .16s, background .16s;
+    }
+    .lang-switch button.active {
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 700;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 64px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: 0 2px 0 var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 14px;
+    }
+    .card.hl {
+      background: linear-gradient(180deg, rgba(245, 166, 35, .11), rgba(245, 166, 35, .02));
+      border-color: rgba(245, 166, 35, .42);
+    }
+    h2 {
+      font-size: 16.5px;
+      color: var(--hard-soft);
+      margin-bottom: 10px;
+      letter-spacing: .01em;
+    }
+    h3 { font-size: 14px; color: var(--ink); margin: 14px 0 6px; }
+    p, li { font-size: 14px; color: var(--ink); }
+    p + p { margin-top: 8px; }
+    ul { margin-top: 6px; }
+    li { margin-left: 20px; margin-bottom: 5px; }
+    strong { color: #000; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12.5px;
+      background: var(--card-2);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 1px 5px;
+      color: var(--hard-soft);
+      word-break: break-all;
+    }
+    a { color: var(--hard); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+    th, td {
+      text-align: left;
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th { color: var(--ink-soft); font-weight: 600; font-size: 12px; }
+    tr:last-child td { border-bottom: none; }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 1px 8px;
+      border-radius: 999px;
+      background: rgba(53, 180, 122, .13);
+      color: #1F7A52;
+      box-shadow: inset 0 0 0 1px rgba(53, 180, 122, .34);
+      white-space: nowrap;
+    }
+    .tag.no {
+      background: rgba(214, 69, 69, .10);
+      color: var(--danger);
+      box-shadow: inset 0 0 0 1px rgba(214, 69, 69, .3);
+    }
+    .note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--soft);
+      background: var(--card-2);
+      border-radius: 0 10px 10px 0;
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+    .scroll { overflow-x: auto; }
+    footer {
+      text-align: center;
+      padding: 24px 20px 40px;
+      font-size: 12px;
+      color: var(--ink-mute);
+      border-top: 1px solid var(--line);
+    }
+    footer a { color: var(--ink-soft); }
+    /* 双语切换：默认藏 en，body.lang-en 时反过来。
+       表格单元必须显式还原为 table-cell / table-row，否则 display:block 会把表格拆掉。 */
+    .en { display: none; }
+    body.lang-en .zh { display: none; }
+    body.lang-en .en { display: block; }
+    body.lang-en span.en { display: inline; }
+    body.lang-en table.en { display: table; }
+    body.lang-en thead.en { display: table-header-group; }
+    body.lang-en tbody.en { display: table-row-group; }
+    body.lang-en tr.en { display: table-row; }
+    body.lang-en th.en,
+    body.lang-en td.en { display: table-cell; }
+    body.lang-en ul.en { display: block; }
+    body.lang-en li.en { display: list-item; }
+  </style>
+</head>
+<body class="lang-en">
+  <header>
+    <h1><span class="zh">一线牵 用户协议</span><span class="en">SpinRope Terms of Service</span></h1>
+    <p class="zh">开始游戏前，请花两分钟读一下</p>
+    <p class="en">Two minutes before you start</p>
+    <p class="zh date">最后更新：2026 年 9 月 20 日 · 生效日期：2026 年 9 月 20 日</p>
+    <p class="en date">Last updated: September 20, 2026 · Effective: September 20, 2026</p>
+    <div class="lang-switch">
+      <button id="btn-en" class="active">English</button>
+      <button id="btn-zh">中文</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card hl">
+      <h2 class="zh">速览：这份协议说了什么</h2>
+      <h2 class="en">Overview: What This Says</h2>
+      <ul class="zh">
+        <li>这是一款<strong>单机免费游戏</strong>（SpinRope，中文名「一线牵」，包名 <code>com.guanren.spinrope</code>），全部 45 关都可以免费玩；</li>
+        <li>游戏里有广告（Google AdMob），这是它保持免费的方式；<strong>没有任何内购，也没有付费道具</strong>；</li>
+        <li>你的进度存在<strong>自己的手机上</strong>，我们没有你的数据；</li>
+        <li>本应用按"现状"提供，我们不保证它永不中断或无缺陷；</li>
+        <li>年龄门槛：<strong>13 周岁及以上</strong>。</li>
+      </ul>
+      <ul class="en">
+        <li>A <strong>free offline physics puzzle game</strong> (SpinRope, package <code>com.guanren.spinrope</code>) — all 45 levels are free to play;</li>
+        <li>Ads (Google AdMob) keep it free; <strong>there are no in-app purchases and no paid items</strong>;</li>
+        <li>Your progress is on <strong>your own phone</strong> — we hold none of your data;</li>
+        <li>The App is provided "as is"; we cannot promise it is never interrupted or bug-free;</li>
+        <li>Age threshold: <strong>13 and over</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">一、协议接受</h2>
+      <h2 class="en">1. Acceptance of Terms</h2>
+      <p class="zh">下载、安装或使用 SpinRope / 一线牵（以下简称"本应用"），即表示你已阅读、理解并同意本协议的全部条款，同时也表示你已阅读<a href="spinrope-privacy-policy.html">隐私政策</a>。应用首次启动时会展示准入页，请你在确认已阅读并接受本协议与隐私政策后再继续；若你不同意其中任何一条，可直接退出并卸载本应用。</p>
+      <p class="zh">你确认自己<strong>已年满 13 周岁</strong>。本应用面向 13 周岁及以上的一般用户，不以未满 13 周岁的儿童为目标受众。若你未达此年龄，请在监护人同意并陪同的前提下使用，或不要使用。</p>
+      <p class="en">By downloading, installing, or using SpinRope ("the App"), you confirm that you have read, understood, and agreed to all terms below, and that you have read the <a href="spinrope-privacy-policy.html">Privacy Policy</a>. At first launch the App shows a gate asking you to confirm that you have read and accept these terms and the Privacy Policy before continuing; if you disagree with any part, you may exit and uninstall the App.</p>
+      <p class="en">You confirm that you are <strong>at least 13 years old</strong>. The App is intended for a general audience aged 13 and over and is not directed at children under 13. If you are younger, please use it only with a guardian's consent and supervision, or do not use it.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">二、服务说明</h2>
+      <h2 class="en">2. Service Description</h2>
+      <p class="zh">本应用是一款单机物理解谜游戏：<strong>画一条线当轨道，让红球滚到青球那里，两球接触即过关。</strong>线不是死板的直线 —— 它有物理属性，会下垂、被压弯、卸力后回弹。每关限定笔数（par），每条线用哪种材质由关卡固定分配，<strong>玩家不能自行切换</strong>：软绳会下垂、回弹、被球压变形，适合做"兜、垫、弹、荡"；硬笔接近刚体，形状几乎不变，适合精确的轨道与穿越窄缝。</p>
+      <p class="zh">失败有两种：笔数用完、全场静止仍未相遇（卡住）；或球碰到尖刺区（立即失败）。过关按用笔数评星：<strong>用比 par 更少的笔完成得 3 星，用满 par 得 2 星</strong>。游戏含 45 关、分 9 章递进，配备音效、背景音乐、震动与关卡提示开关。</p>
+      <p class="zh">本应用<strong>核心玩法完全离线运行</strong>，不需要注册账号、不提供云存档、不含排行榜、社交或用户生成内容。仅广告加载需要联网。</p>
+      <p class="zh">为维持免费运营，应用内展示由第三方（Google AdMob）提供的横幅与插屏广告。横幅只在主菜单底部与游戏画面内底部固定位置出现，不遮挡画线操作区；插屏只在关卡结算阶段出现，且第 6 关起才参与计数、冷启动后 60 秒内不展示、两次展示间隔不少于 100 秒、通关最后一关时不展示。广告内容与投放行为由广告商及其平台负责，受其各自的条款与政策约束。</p>
+      <p class="en">The App is a casual offline physics puzzle game: <strong>draw a line as a track and let the red ball roll to the cyan ball — they meet, you clear the level.</strong> Your line is not a rigid plank: it is simulated, so it sags, gets pressed out of shape, and springs back when unloaded. Each level grants a fixed number of pens, and the material of each pen is assigned by the level — <strong>you cannot switch it yourself</strong>. Soft rope sags, bounces and deforms, good for catching, padding, springing and swinging; the hard pen is near-rigid and holds its shape, good for precise tracks and squeezing through narrow gaps.</p>
+      <p class="en">There are two ways to fail: run out of pens with everything at rest and the balls still apart (stuck), or let a ball touch the spikes (instant fail). Cleared levels are rated by pens used: <strong>fewer than par earns 3 stars, exactly par earns 2 stars</strong>. The App includes 45 levels across 9 chapters, plus sound, background music, vibration and hint toggles.</p>
+      <p class="en"><strong>Core gameplay runs fully offline</strong>: no account, no cloud saves, no leaderboard, no social features, no user-generated content. Only ad loading needs a network connection.</p>
+      <p class="en">To stay free, the App shows banner and interstitial ads from a third party (Google AdMob). Banners appear only at the bottom of the main menu and the bottom of the in-game screen, in fixed positions that never cover the drawing area. Interstitials appear only at level results, only from level 6 onward, never within 60 seconds of a cold start, never less than 100 seconds after the previous one, and never when you clear the final level. Ad content and delivery are the responsibility of the advertiser and its platform, governed by their own terms and policies.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">三、许可与使用范围</h2>
+      <h2 class="en">3. Licence and Scope of Use</h2>
+      <p class="zh">在你遵守本协议的前提下，我们授予你一项<strong>个人的、非独占的、不可转让、不可再许可、可撤销的有限许可</strong>，允许你在自己拥有或控制的设备上安装并使用本应用，仅用于个人、非商业的娱乐目的。</p>
+      <p class="zh">你可以在设备之间自行转移应用（通过应用商店的正常安装流程），但不得出租、出借、出售、分发、转授权或以其他方式向第三方提供本应用。</p>
+      <p class="en">Subject to your compliance with these terms, we grant you a <strong>personal, non-exclusive, non-transferable, non-sublicensable, revocable, limited licence</strong> to install and use the App on devices you own or control, for personal, non-commercial entertainment only.</p>
+      <p class="en">You may move the App between your own devices through the store's normal installation process, but you may not rent, lend, sell, distribute, sublicense, or otherwise make the App available to third parties.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">四、你的责任与使用规范</h2>
+      <h2 class="en">4. Your Responsibilities</h2>
+      <ul class="zh">
+        <li>你对自己使用本应用的行为负责，不得利用本应用从事任何违反法律法规的活动；</li>
+        <li>不得对本应用进行逆向工程、反编译、反汇编、修改、二次打包或试图提取源代码（适用法律明确允许的范围除外）；</li>
+        <li>不得通过外挂、自动化脚本、模拟点击、修改本地数据或利用漏洞等方式干扰本应用的正常运行或广告机制；</li>
+        <li>不得移除、遮盖、篡改应用内的广告或版权、商标标识；</li>
+        <li>不得利用本应用骚扰、侵害他人权益或上架到其他应用商店冒充本应用；</li>
+        <li>请勿在应用内输入或存储敏感个人信息 —— 本应用也没有任何输入框需要你填写这些内容。</li>
+      </ul>
+      <ul class="en">
+        <li>You are responsible for your own use of the App and must not use it for any unlawful purpose;</li>
+        <li>You must not reverse engineer, decompile, disassemble, modify, repackage, or attempt to extract the source code of the App (except where applicable law expressly permits);</li>
+        <li>You must not interfere with the App's normal operation or its ad mechanics through bots, automated scripts, simulated taps, tampering with local data, or exploiting bugs;</li>
+        <li>You must not remove, obscure, or alter in-app advertising or copyright and trademark notices;</li>
+        <li>You must not use the App to harass others, infringe their rights, or re-publish it on other stores as your own;</li>
+        <li>Please do not enter or store sensitive personal information in the App — there is no input field asking for it anyway.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">五、广告与第三方链接</h2>
+      <h2 class="en">5. Ads and Third-Party Links</h2>
+      <p class="zh">应用内广告由 Google AdMob 提供。我们不对广告内容的真实性、准确性、合法性或可用性作出任何承诺或背书。点击广告可能跳转到<strong>第三方网站或应用商店页面</strong>，那些页面与交易完全由第三方运营，适用其自身的条款与隐私政策；请自行判断并谨慎提供任何信息。</p>
+      <p class="zh">关于广告可能收集的信息以及如何关闭个性化广告、重置广告标识符，请见<a href="spinrope-privacy-policy.html">隐私政策</a>第五章与第六章。</p>
+      <p class="en">In-app ads are served by Google AdMob. We make no promise about, and do not endorse, the truthfulness, accuracy, legality, or availability of ad content. Tapping an ad may take you to a <strong>third-party website or store listing</strong> operated entirely by others, governed by their own terms and privacy policies; please use your own judgement and share information cautiously.</p>
+      <p class="en">For what ads may collect and how to disable personalized ads or reset your advertising ID, see Sections 5 and 6 of the <a href="spinrope-privacy-policy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、费用与内购</h2>
+      <h2 class="en">6. Fees and Purchases</h2>
+      <p class="zh">本应用<strong>免费下载、免费游玩，不含任何内购、订阅、付费道具、抽奖或虚拟货币</strong>，也不会向你索取付款信息。若应用商店或你的运营商因下载产生流量等费用，由你自行承担。</p>
+      <p class="en">The App is <strong>free to download and free to play, with no in-app purchases, subscriptions, paid items, loot boxes, or virtual currency</strong>, and it never asks for payment details. Any data charges levied by your store or carrier for downloading are yours.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">七、本地数据与你的控制</h2>
+      <h2 class="en">7. Local Data and Your Control</h2>
+      <p class="zh">游戏进度（已通关到第几关、每关最好星级）与设置偏好保存在你设备的应用私有目录中，<strong>我们不持有副本，也无法为你恢复</strong>。因此：</p>
+      <ul class="zh">
+        <li>卸载应用或"清除应用数据"会删除全部本地数据，<strong>不可撤销</strong>；</li>
+        <li>重装应用后<strong>进度不会自动回来</strong>：本应用已关闭系统级备份，卸载即永久删除；</li>
+        <li>更换设备、刷机、恢复出厂设置等导致的数据丢失，我们无法找回，也没有可恢复的途径 —— 本应用没有任何云端副本。</li>
+      </ul>
+      <p class="en">Game progress (how far you have cleared, your best stars per level) and your preferences are stored in the App's private directory on <strong>your</strong> device; <strong>we hold no copy and cannot restore it for you</strong>. Therefore:</p>
+      <ul class="en">
+        <li>Uninstalling the App or clearing its data deletes all local data, <strong>irreversibly</strong>;</li>
+        <li>Progress does <strong>not</strong> come back after reinstalling: system-level backup is switched off, so uninstalling deletes it permanently;</li>
+        <li>Data lost through changing devices, flashing, or a factory reset cannot be recovered by us, and there is no copy to restore from — the App keeps no cloud backup.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">八、用户权利</h2>
+      <h2 class="en">8. Your Rights as a User</h2>
+      <p class="zh">除了法律赋予你的权利之外，作为本应用的用户，你拥有以下明确的权利，且都<strong>不需要经过我们的批准</strong>：</p>
+      <ul class="zh">
+        <li><strong>免费使用全部内容的权利</strong>：45 个关卡、9 个章节全部可以通过正常游玩解锁，不存在付费墙，也没有需要购买的道具或皮肤；</li>
+        <li><strong>知情权</strong>：随时查看我们存了什么、用了什么权限（见<a href="spinrope-privacy-policy.html">隐私政策</a>第三、四章）；</li>
+        <li><strong>删除权</strong>：随时通过卸载应用或清除应用数据彻底删除全部本地数据，无需向我们申请；</li>
+        <li><strong>关闭个性化广告与重置广告标识符的权利</strong>：在系统「设置 → 隐私 → 广告」中操作；</li>
+        <li><strong>不受打扰的权利</strong>：插屏广告仅在结算阶段出现，且第 6 关起、冷启动后 60 秒内不展示、两次间隔不少于 100 秒、连续失败不触发、最后一关通关时不展示；横幅固定在画面内不遮挡操作区；</li>
+        <li><strong>停止使用的权利</strong>：你可以在任何时候卸载本应用，本协议随之终止；</li>
+        <li><strong>反馈与投诉的权利</strong>：欢迎发邮件提出意见、报告问题或投诉，我们会认真对待并尽力回复。</li>
+      </ul>
+      <p class="en">Apart from rights granted by law, as a user of the App you have the following rights, none of which <strong>requires our approval</strong>:</p>
+      <ul class="en">
+        <li><strong>Free access to all content</strong>: all 45 levels across 9 chapters are unlocked by normal play — there is no paywall, and no items or skins to buy;</li>
+        <li><strong>To know</strong> what we store and which permissions are used (see Sections 3 and 4 of the <a href="spinrope-privacy-policy.html">Privacy Policy</a>);</li>
+        <li><strong>Erasure</strong>: uninstall the App or clear app data at any time to delete all local data — with no request to us;</li>
+        <li><strong>To disable personalized ads and reset the advertising ID</strong>, via system Settings → Privacy → Ads;</li>
+        <li><strong>Not to be nagged</strong>: interstitials appear only at results, from level 6 onward, never within 60 seconds of a cold start, never less than 100 seconds apart, never triggered by two fails in a row, and never when you clear the final level; banners sit in fixed positions that do not cover the drawing area;</li>
+        <li><strong>To stop using</strong> the App at any time; uninstalling ends this agreement;</li>
+        <li><strong>To give feedback and complain</strong>: email us with concerns, bug reports, or complaints; we take them seriously and will do our best to reply.</li>
+      </ul>
+      <p class="zh">若你认为你的权利受到侵害，可先邮件联系我们；如仍未解决，你可以向所在国家/地区有管辖权的监管机构或消费者保护机构投诉。</p>
+      <p class="en">If you believe your rights have been infringed, email us first; if unresolved, you may complain to the competent authority or consumer protection body in your country or region.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">九、知识产权</h2>
+      <h2 class="en">9. Intellectual Property</h2>
+      <p class="zh">本应用的全部代码、界面设计、美术资源、图标、音效与音乐、关卡设计与玩法实现，以及"SpinRope"「一线牵」名称与标识，其知识产权归开发者所有，受著作权法及相关法律保护。未经事先书面许可，不得复制、修改、翻译、演绎、传播、公开演示或用于任何商业用途。</p>
+      <p class="zh">你在使用本应用过程中产生的<strong>本地游玩数据归你本人所有</strong>；我们不对其主张任何权利。本协议未明示授予的一切权利，均由我们保留。</p>
+      <p class="en">All code, UI design, artwork, icons, sound effects and music, level design, gameplay implementation, and the "SpinRope" name and marks are owned by the developer and protected by copyright and related laws. You may not copy, modify, translate, adapt, distribute, publicly display, or commercially use them without prior written permission.</p>
+      <p class="en"><strong>Local play data you generate belongs to you</strong>; we claim no rights over it. All rights not expressly granted in these terms are reserved.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">十、免责声明</h2>
+      <h2 class="en">10. Disclaimer</h2>
+      <ul class="zh">
+        <li>本应用仅供休闲娱乐与动脑解谜用途，成绩与星级仅作个人练习参考，<strong>不构成任何技能、竞赛成绩或资质的证明</strong>；</li>
+        <li>本应用按<strong>"现状"与"现有"</strong>提供，我们不作任何明示或默示的保证，包括但不限于适销性、特定用途适用性或不侵权；</li>
+        <li>我们不保证应用永不中断、无错误、无延迟，也不保证与所有设备型号、系统版本或第三方软件完全兼容；不同设备的性能差异可能影响物理模拟的表现；</li>
+        <li>因设备故障、系统升级、应用商店下架、不可抗力或其他超出我们合理控制范围的原因导致的服务中断或数据丢失，我们不承担责任；</li>
+        <li>广告内容及你与广告商之间的任何交互，与本应用无关，我们不承担由此产生的责任。</li>
+      </ul>
+      <ul class="en">
+        <li>The App is for casual entertainment and puzzle-solving; results and stars are personal practice references and <strong>do not prove any skill, competition result, or qualification</strong>;</li>
+        <li>The App is provided <strong>"as is" and "as available"</strong>, without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, or non-infringement;</li>
+        <li>We do not warrant uninterrupted, error-free, or latency-free operation, nor full compatibility with every device model, OS version, or third-party software; differences in device performance may affect how the physics simulation behaves;</li>
+        <li>We are not liable for interruptions or data loss caused by device failure, OS updates, store removal, force majeure, or other causes beyond our reasonable control;</li>
+        <li>Ad content and any interaction between you and an advertiser are unrelated to the App, and we bear no liability arising from them.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">十一、责任限制</h2>
+      <h2 class="en">11. Limitation of Liability</h2>
+      <p class="zh">在适用法律允许的最大范围内，我们对因使用或无法使用本应用而产生的任何间接、附带、特殊、惩罚性或后果性损害（包括但不限于利润损失、数据丢失、设备损坏），概不承担责任。</p>
+      <p class="zh">本应用为免费提供，故<strong>在任何情况下，我们对你承担的全部责任总额均不超过你为使用本应用实际支付的金额（即 0 元）</strong>。某些司法辖区不允许排除默示保证或限制附带损害的责任，若你所在的辖区属于此类，上述部分限制可能不适用于你 —— 但这不影响其余条款的效力。</p>
+      <p class="en">To the maximum extent permitted by applicable law, we are not liable for any indirect, incidental, special, punitive, or consequential damages arising from the use of, or inability to use, the App, including lost profits, data loss, or device damage.</p>
+      <p class="en">Because the App is provided free of charge, <strong>our total aggregate liability to you shall in no case exceed the amount you actually paid to use the App (i.e. zero)</strong>. Some jurisdictions do not allow the exclusion of implied warranties or limitation of incidental damages; if yours is one of them, some limits above may not apply to you, which does not affect the validity of the remaining terms.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">十二、协议变更与终止</h2>
+      <h2 class="en">12. Changes and Termination</h2>
+      <p class="zh">我们可能根据产品与法规变化适时更新本协议。更新后的条款将在本页面发布并标注新的"最后更新"日期；若变更涉及你的重要权益，我们会通过应用内提示或应用商店更新说明提前告知。变更生效后你继续使用本应用，即视为接受更新后的条款；若你不同意，请停止使用并卸载。</p>
+      <p class="zh">你可以在任何时间通过卸载本应用终止本协议。若你严重违反本协议，我们有权在不另行通知的情况下终止你的使用许可。协议终止后，关于知识产权、免责声明、责任限制的条款继续有效。</p>
+      <p class="en">We may update these terms from time to time in response to product or legal changes. Revised terms will be posted on this page with a new "Last updated" date; if a change affects your material interests, we will announce it in advance via an in-app notice or store release notes. Continuing to use the App after a change takes effect constitutes acceptance; if you disagree, stop using it and uninstall.</p>
+      <p class="en">You may terminate this agreement at any time by uninstalling the App. If you materially breach these terms, we may terminate your licence without further notice. On termination, the sections on intellectual property, disclaimer, and limitation of liability survive.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">十三、联系方式</h2>
+      <h2 class="en">13. Contact Us</h2>
+      <p class="zh">对本协议有任何疑问、意见或投诉，请发送邮件至 <a href="mailto:455647783@qq.com">455647783@qq.com</a>。我们会尽力在合理期限内回复。</p>
+      <p class="en">For any question, comment, or complaint about these terms, email <a href="mailto:455647783@qq.com">455647783@qq.com</a>. We will do our best to reply within a reasonable period.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="zh">© 2026 SpinRope · 一线牵 · <a href="spinrope-privacy-policy.html">隐私政策</a></span>
+    <span class="en">© 2026 SpinRope · <a href="spinrope-privacy-policy.html">Privacy Policy</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      var zhBtn = document.getElementById('btn-zh');
+      var enBtn = document.getElementById('btn-en');
+      function apply(lang) {
+        document.body.className = 'lang-' + lang;
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        zhBtn.classList.toggle('active', lang === 'zh');
+        enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('spinrope-lang', lang); } catch (e) {}
+      }
+      zhBtn.addEventListener('click', function () { apply('zh'); });
+      enBtn.addEventListener('click', function () { apply('en'); });
+      var saved = null;
+      try { saved = localStorage.getItem('spinrope-lang'); } catch (e) {}
+      if (saved === 'zh' || saved === 'en') {
+        apply(saved);
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0) {
+        apply('zh');
+      }
+    })();
+  </script>
+</body>
+</html>
