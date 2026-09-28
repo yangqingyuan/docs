@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TopSticks — Privacy Policy</title>
+<style>
+  :root { --bg:#0f141c; --card:#1e2733; --ink:#eef2f7; --soft:#8d9aab; --gold:#e8b45a; --gold-2:#f3d79a; --teal:#3ec6c9; --line:rgba(255,255,255,.12); }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f7f5f0; --card:#ffffff; --ink:#20242b; --soft:#5d6878; --gold:#b8801f; --gold-2:#8a5f13; --teal:#0f7d80; --line:rgba(0,0,0,.12); }
+  }
+  * { box-sizing: border-box; }
+
+  /* 语言切换：只靠 html[data-lang] 这一个开关控制两套内容的显隐，不依赖 JS 才能读到内容 */
+  html[data-lang="en"] [data-lang-block="zh"] { display: none !important; }
+  html[data-lang="zh"] [data-lang-block="en"] { display: none !important; }
+
+  body {
+    margin: 0; padding: 32px 20px 80px; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.75; font-size: 15px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  .topbar { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+  .lang-switch {
+    display: inline-flex; gap: 4px; padding: 3px; border-radius: 11px;
+    background: var(--card); border: 1px solid var(--line);
+  }
+  .lang-switch button {
+    border: 0; background: transparent; color: var(--soft); font-family: inherit;
+    font-size: 12.5px; font-weight: 800; letter-spacing: .3px;
+    padding: 5px 15px; border-radius: 8px; cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+  }
+  .lang-switch button.on { background: var(--gold); color: #241705; }
+  .lang-switch button:hover:not(.on) { color: var(--ink); }
+
+  header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: .5px; }
+  .meta { color: var(--soft); font-size: 13px; }
+  h2 { margin: 34px 0 10px; font-size: 18px; color: var(--gold); }
+  h3 { margin: 22px 0 6px; font-size: 15px; }
+  p, li { color: var(--ink); }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--teal); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; margin: 18px 0; }
+  .lead { color: var(--soft); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--soft); font-size: 12.5px; text-transform: uppercase; letter-spacing: .6px; }
+  footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--soft); font-size: 13px; }
+  code { background: rgba(127,127,127,.18); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button type="button" data-set-lang="en">EN</button>
+      <button type="button" data-set-lang="zh">中文</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>
+      <span data-lang-block="en">Privacy Policy</span>
+      <span data-lang-block="zh">隐私政策</span>
+    </h1>
+    <div class="meta">
+      <span data-lang-block="en">TopSticks &middot; Effective date: 23 September 2026 &middot; Last updated: 23 September 2026</span>
+      <span data-lang-block="zh">TopSticks &middot; 生效日期：2026 年 9 月 23 日 &middot; 最后更新：2026 年 9 月 23 日</span>
+    </div>
+  </header>
+
+  <!-- ==================== English ==================== -->
+  <article data-lang-block="en">
+
+    <p class="lead">This policy explains what TopSticks ("the Game", "we") does with information when you play it. The short version: <strong>we do not ask for your name, phone number, email or location, we have no accounts, and your game progress never leaves your device.</strong> The only third party involved is the advertising SDK described below.</p>
+
+    <h2>1. Information we do not collect</h2>
+    <div class="card">
+      <p>TopSticks has no servers and no user accounts. We do not collect, transmit or store:</p>
+      <ul>
+        <li>your name, email address, phone number or postal address;</li>
+        <li>your precise or approximate location;</li>
+        <li>your contacts, photos, files or messages;</li>
+        <li>any account credentials, because there are no accounts.</li>
+      </ul>
+    </div>
+
+    <h2>2. Data stored on your device</h2>
+    <p>Your game progress is written to your device's local app storage (Android SharedPreferences) and is never uploaded:</p>
+    <table>
+      <tr><th>What</th><th>Why</th></tr>
+      <tr><td>Coins, level stars, unlocked skins</td><td>So your progress survives closing the app</td></tr>
+      <tr><td>Sound, music and vibration preferences</td><td>So your settings stick</td></tr>
+      <tr><td>Terms-acceptance flag</td><td>So we don't ask again on every launch</td></tr>
+    </table>
+    <p>This data is removed when you uninstall the Game. Because it never leaves your device, we cannot recover it for you, and it is not transferred to a new device.</p>
+
+    <h2>3. Advertising</h2>
+    <p>TopSticks is free and supported by advertising. We use <strong>Google AdMob</strong> to serve interstitial and rewarded ads. To do that, Google may collect and process:</p>
+    <ul>
+      <li>your device's advertising identifier (Android Advertising ID);</li>
+      <li>device information such as model, operating system version and language;</li>
+      <li>your IP address, which Google uses to estimate approximate (city-level) location for ad relevance;</li>
+      <li>interactions with ads, such as impressions and clicks.</li>
+    </ul>
+    <p>This information is collected by Google, not by us. We never receive your advertising identifier or any personal data from Google — our integration only receives aggregate revenue reports.</p>
+    <p>Google's handling of this data is governed by its own policies:</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a></li>
+    </ul>
+
+    <h3>Your choices about advertising</h3>
+    <ul>
+      <li><strong>Personalised ads:</strong> if you are in the EEA, the UK or Switzerland, you are asked for consent through Google's User Messaging Platform when you first launch the Game. You can change your choice at any time in <em>Settings &rarr; Ad privacy options</em>.</li>
+      <li><strong>Anywhere else:</strong> you can reset or delete your advertising ID, and opt out of personalised advertising, in your device's <em>Settings &rarr; Privacy &rarr; Ads</em>.</li>
+    </ul>
+
+    <h2>4. Children</h2>
+    <p>TopSticks is intended for users aged <strong>13 and over</strong>. It is not directed to children under 13, and we do not knowingly collect personal information from children. If you believe a child under 13 has provided personal information through the advertising SDK, please contact us and we will take appropriate steps.</p>
+
+    <h2>5. Data security and retention</h2>
+    <p>We hold no personal data on any server, so there is no server-side database of yours to breach or to delete. Locally stored progress stays on your device until you uninstall the Game or clear its data. Advertising data collected by Google is retained according to Google's own retention policies.</p>
+
+    <h2>6. Your rights</h2>
+    <p>Because we do not hold personal data about you, there is nothing for us to export, correct or erase on our side. For data held by Google in connection with advertising, please use the choices described in section 3, or contact Google directly. If you are in the EEA or the UK, you may also lodge a complaint with your local data protection authority.</p>
+
+    <h2>7. Permissions the Game requests</h2>
+    <table>
+      <tr><th>Permission</th><th>Why</th></tr>
+      <tr><td><code>INTERNET</code></td><td>Required to download ads</td></tr>
+      <tr><td><code>AD_ID</code></td><td>Required by the advertising SDK to access the advertising identifier</td></tr>
+      <tr><td><code>VIBRATE</code></td><td>Haptic feedback when you yank a stick</td></tr>
+    </table>
+
+    <h2>8. Changes to this policy</h2>
+    <p>If this policy changes, the "Last updated" date above will change with it. Material changes will also be noted in the Game's Play Store release notes. Continued use of the Game after a change means you accept the updated policy.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions about this policy: <a href="mailto:yangqingyuan.dev@gmail.com">yangqingyuan.dev@gmail.com</a></p>
+    <p>See also our <a href="topsticks-terms-of-service.html" data-lang-link="topsticks-terms-of-service.html">Terms of Service</a>.</p>
+
+  </article>
+
+  <!-- ==================== 中文 ==================== -->
+  <article data-lang-block="zh">
+
+    <p class="lead">本政策说明你在游玩「拾签」（TopSticks，以下称"本游戏"）时，我们会如何处理相关信息。简单来说：<strong>我们不索取你的姓名、手机号、邮箱或位置，没有账号体系，你的游戏进度也不会离开你的设备。</strong>唯一涉及的第三方是下文所述的广告 SDK。</p>
+
+    <h2>一、我们不会收集的信息</h2>
+    <div class="card">
+      <p>本游戏没有服务器，也没有用户账号。我们不会收集、传输或存储：</p>
+      <ul>
+        <li>你的姓名、邮箱、电话号码或通讯地址；</li>
+        <li>你的精确定位或大致位置；</li>
+        <li>你的通讯录、照片、文件或短信；</li>
+        <li>任何账号凭据，因为本游戏根本没有账号。</li>
+      </ul>
+    </div>
+
+    <h2>二、保存在你设备上的数据</h2>
+    <p>你的游戏进度写入设备本地的应用存储（Android SharedPreferences），从不上传：</p>
+    <table>
+      <tr><th>内容</th><th>用途</th></tr>
+      <tr><td>金币、关卡星级、已解锁皮肤</td><td>关闭应用后进度不丢失</td></tr>
+      <tr><td>音效、音乐、震动开关</td><td>记住你的偏好设置</td></tr>
+      <tr><td>条款接受标记</td><td>避免每次启动都重复询问</td></tr>
+    </table>
+    <p>卸载本游戏即会删除这些数据。由于它们从不离开你的设备，我们无法为你恢复，也无法迁移到新设备。</p>
+
+    <h2>三、广告</h2>
+    <p>本游戏免费，靠广告支持运营。我们使用 <strong>Google AdMob</strong> 展示插页广告与激励视频。为此，Google 可能会收集并处理：</p>
+    <ul>
+      <li>你设备的广告标识符（Android Advertising ID）；</li>
+      <li>设备信息，例如机型、操作系统版本、语言；</li>
+      <li>你的 IP 地址，Google 用它估算大致（城市级）位置以匹配广告；</li>
+      <li>与广告的交互，例如展示与点击。</li>
+    </ul>
+    <p>这些信息由 Google 收集，而非我们。我们不会从 Google 收到你的广告标识符或任何个人数据——我们的接入方只会拿到汇总的收入报表。</p>
+    <p>Google 对这些数据的处理遵循其自身政策：</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a></li>
+      <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 如何使用来自使用其服务的网站或应用的信息</a></li>
+    </ul>
+
+    <h3>你可以做的选择</h3>
+    <ul>
+      <li><strong>个性化广告：</strong>如果你位于欧洲经济区、英国或瑞士，首次启动游戏时我们会通过 Google 的用户消息平台征求你的同意。你可以随时在<em>「设置 → 广告隐私选项」</em>中更改。</li>
+      <li><strong>其他地区：</strong>你可以在设备的<em>「设置 → 隐私 → 广告」</em>中重置或删除广告 ID，并关闭个性化广告。</li>
+    </ul>
+
+    <h2>四、儿童</h2>
+    <p>本游戏面向 <strong>13 岁及以上</strong>用户，不面向 13 岁以下儿童，我们也不会主动收集儿童的个人信息。若你认为有 13 岁以下儿童通过广告 SDK 提供了个人信息，请联系我们，我们会采取相应措施。</p>
+
+    <h2>五、数据安全与保留</h2>
+    <p>我们在任何服务器上都不持有你的个人数据，因此不存在可被泄露或需要删除的服务端数据库。本地保存的进度会一直留在你的设备上，直到你卸载本游戏或清除其数据。Google 收集的广告数据按 Google 自身的保留政策处理。</p>
+
+    <h2>六、你的权利</h2>
+    <p>由于我们不持有你的个人数据，我们这边没有可导出、更正或删除的内容。对于 Google 因广告而持有的数据，请使用第三节所述的选择项，或直接联系 Google。如果你位于欧洲经济区或英国，你也可以向当地数据保护机构投诉。</p>
+
+    <h2>七、本游戏申请的权限</h2>
+    <table>
+      <tr><th>权限</th><th>用途</th></tr>
+      <tr><td><code>INTERNET</code></td><td>下载广告所需</td></tr>
+      <tr><td><code>AD_ID</code></td><td>广告 SDK 访问广告标识符所需</td></tr>
+      <tr><td><code>VIBRATE</code></td><td>硬拔签时的震动反馈</td></tr>
+    </table>
+
+    <h2>八、政策变更</h2>
+    <p>本政策如有修改，上方的「最后更新」日期会同步变更。重大变更还会在游戏的 Play 商店更新说明中标注。变更后继续使用本游戏，即表示你接受更新后的政策。</p>
+
+    <h2>九、联系方式</h2>
+    <p>对本政策有疑问：<a href="mailto:yangqingyuan.dev@gmail.com">yangqingyuan.dev@gmail.com</a></p>
+    <p>另见我们的<a href="topsticks-terms-of-service.html" data-lang-link="topsticks-terms-of-service.html">服务条款</a>。</p>
+
+  </article>
+
+  <footer>
+    <span data-lang-block="en">TopSticks is an independent game. This page is the authoritative version of the Privacy Policy linked from the Game and from its Google Play listing.</span>
+    <span data-lang-block="zh">拾签（TopSticks）是一款独立开发的作品。本页面是游戏内及 Google Play 商店页面所链接隐私政策的正式版本。</span>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'topsticks-doc-lang';
+  var buttons = document.querySelectorAll('[data-set-lang]');
+  var langLinks = document.querySelectorAll('a[data-lang-link]');
+  var TITLES = {
+    en: 'TopSticks — Privacy Policy',
+    zh: 'TopSticks — 隐私政策'
+  };
+
+  function apply(lang) {
+    var l = lang === 'zh' ? 'zh' : 'en';
+    document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.setAttribute('lang', l === 'zh' ? 'zh-CN' : 'en');
+    document.title = TITLES[l];
+
+    for (var i = 0; i < buttons.length; i++) {
+      var isOn = buttons[i].getAttribute('data-set-lang') === l;
+      buttons[i].classList.toggle('on', isOn);
+      buttons[i].setAttribute('aria-pressed', isOn ? 'true' : 'false');
+    }
+
+    // 站内互链带上语言，避免点过去又跳回另一种语言
+    for (var j = 0; j < langLinks.length; j++) {
+      langLinks[j].setAttribute('href', langLinks[j].getAttribute('data-lang-link') + '?lang=' + l);
+    }
+
+    try { localStorage.setItem(KEY, l); } catch (e) { /* 无痕模式等场景忽略即可 */ }
+  }
+
+  // 优先级：URL 参数（便于商店里直接填中文链接）> 上次选择 > 浏览器语言
+  function initial() {
+    var fromUrl = null;
+    try {
+      fromUrl = new URLSearchParams(location.search).get('lang');
+    } catch (e) { /* 老浏览器忽略 */ }
+    if (fromUrl) return fromUrl;
+
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved) return saved;
+    } catch (e) { /* 同上 */ }
+
+    var nav = (navigator.language || 'en').toLowerCase();
+    return nav.indexOf('zh') === 0 ? 'zh' : 'en';
+  }
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      apply(this.getAttribute('data-set-lang'));
+    });
+  }
+
+  apply(initial());
+})();
+</script>
+</body>
+</html>

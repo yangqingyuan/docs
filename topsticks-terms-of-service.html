@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TopSticks — Terms of Service</title>
+<style>
+  :root { --bg:#0f141c; --card:#1e2733; --ink:#eef2f7; --soft:#8d9aab; --gold:#e8b45a; --gold-2:#f3d79a; --teal:#3ec6c9; --line:rgba(255,255,255,.12); }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f7f5f0; --card:#ffffff; --ink:#20242b; --soft:#5d6878; --gold:#b8801f; --gold-2:#8a5f13; --teal:#0f7d80; --line:rgba(0,0,0,.12); }
+  }
+  * { box-sizing: border-box; }
+
+  /* 语言切换：只靠 html[data-lang] 这一个开关控制两套内容的显隐，不依赖 JS 才能读到内容 */
+  html[data-lang="en"] [data-lang-block="zh"] { display: none !important; }
+  html[data-lang="zh"] [data-lang-block="en"] { display: none !important; }
+
+  body {
+    margin: 0; padding: 32px 20px 80px; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.75; font-size: 15px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  .topbar { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+  .lang-switch {
+    display: inline-flex; gap: 4px; padding: 3px; border-radius: 11px;
+    background: var(--card); border: 1px solid var(--line);
+  }
+  .lang-switch button {
+    border: 0; background: transparent; color: var(--soft); font-family: inherit;
+    font-size: 12.5px; font-weight: 800; letter-spacing: .3px;
+    padding: 5px 15px; border-radius: 8px; cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+  }
+  .lang-switch button.on { background: var(--gold); color: #241705; }
+  .lang-switch button:hover:not(.on) { color: var(--ink); }
+
+  header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: .5px; }
+  .meta { color: var(--soft); font-size: 13px; }
+  h2 { margin: 34px 0 10px; font-size: 18px; color: var(--gold); }
+  p, li { color: var(--ink); }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--teal); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; margin: 18px 0; }
+  .lead { color: var(--soft); }
+  footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--soft); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button type="button" data-set-lang="en">EN</button>
+      <button type="button" data-set-lang="zh">中文</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>
+      <span data-lang-block="en">Terms of Service</span>
+      <span data-lang-block="zh">服务条款</span>
+    </h1>
+    <div class="meta">
+      <span data-lang-block="en">TopSticks &middot; Effective date: 23 September 2026 &middot; Version 1.0</span>
+      <span data-lang-block="zh">TopSticks &middot; 生效日期：2026 年 9 月 23 日 &middot; 版本 1.0</span>
+    </div>
+  </header>
+
+  <!-- ==================== English ==================== -->
+  <article data-lang-block="en">
+
+    <p class="lead">These terms govern your use of TopSticks ("the Game"). By installing or playing it, you agree to them. If you do not agree, please do not use the Game.</p>
+
+    <h2>1. Licence to use</h2>
+    <p>We grant you a personal, non-exclusive, non-transferable, revocable licence to install and play TopSticks on devices you own or control, for your own non-commercial entertainment. You may not:</p>
+    <ul>
+      <li>copy, sell, rent, sublicense or redistribute the Game;</li>
+      <li>reverse engineer, decompile or modify the Game, except where such restriction is prohibited by law;</li>
+      <li>remove or obscure any copyright, trademark or attribution notices;</li>
+      <li>use the Game in any way that breaks applicable law.</li>
+    </ul>
+
+    <h2>2. Advertising</h2>
+    <p>TopSticks is free to play and funded entirely by advertising. By using the Game you acknowledge that:</p>
+    <ul>
+      <li>interstitial ads may be shown between levels, subject to frequency limits;</li>
+      <li>rewarded video ads are optional and shown only when you choose to watch one in exchange for an in-game reward;</li>
+      <li>we do not control the content of third-party ads, and we are not responsible for the products or services they promote.</li>
+    </ul>
+    <p>Ad personalisation choices are described in our <a href="topsticks-privacy-policy.html" data-lang-link="topsticks-privacy-policy.html">Privacy Policy</a>.</p>
+
+    <h2>3. In-game currency and items</h2>
+    <div class="card">
+      <p><strong>TopSticks has no in-app purchases.</strong> Coins, stars and stick skins exist only inside the Game and are earned by playing.</p>
+      <ul>
+        <li>They have <strong>no monetary value</strong> and cannot be bought, sold, traded or exchanged for cash or anything of value.</li>
+        <li>They are stored on your device only. Uninstalling the Game, clearing its data, or losing your device permanently removes them, and we cannot restore them.</li>
+        <li>We may adjust how currency is earned or how items are priced in future updates.</li>
+      </ul>
+    </div>
+
+    <h2>4. Availability and changes</h2>
+    <p>We may update, change or discontinue the Game or any of its features at any time. We do not guarantee that the Game will always be available, error-free, or compatible with every device. Gameplay content, difficulty and level design may change between versions.</p>
+
+    <h2>5. Disclaimer of warranties</h2>
+    <p>The Game is provided "as is" and "as available", without warranties of any kind, whether express or implied. To the fullest extent permitted by law, we disclaim all implied warranties, including merchantability, fitness for a particular purpose and non-infringement.</p>
+
+    <h2>6. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, we are not liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data (including locally stored game progress), loss of profits, or device damage arising from your use of the Game.</p>
+
+    <h2>7. Third-party services</h2>
+    <p>The Game integrates Google AdMob and Google's User Messaging Platform. Your use of those services is also subject to Google's own terms and policies. We are not responsible for third-party services.</p>
+
+    <h2>8. Termination</h2>
+    <p>You may stop using the Game at any time by uninstalling it. We may suspend or terminate your licence if you breach these terms.</p>
+
+    <h2>9. Governing law</h2>
+    <p>These terms are governed by the laws applicable at the developer's principal place of business, without regard to conflict-of-law rules. Nothing in these terms limits any mandatory consumer rights you have under the law of your country of residence.</p>
+
+    <h2>10. Changes to these terms</h2>
+    <p>We may revise these terms. The version number and effective date above will change when we do. Continued use of the Game after a revision means you accept the revised terms.</p>
+
+    <h2>11. Contact</h2>
+    <p>Questions about these terms: <a href="mailto:yangqingyuan.dev@gmail.com">yangqingyuan.dev@gmail.com</a></p>
+
+  </article>
+
+  <!-- ==================== 中文 ==================== -->
+  <article data-lang-block="zh">
+
+    <p class="lead">本条款约束你对「拾签」（TopSticks，以下称"本游戏"）的使用。安装或游玩本游戏，即表示你同意本条款。如不同意，请不要使用本游戏。</p>
+
+    <h2>一、使用许可</h2>
+    <p>我们授予你一项个人的、非排他的、不可转让的、可撤销的许可，允许你在自己拥有或控制的设备上安装并游玩本游戏，用于个人的非商业娱乐目的。你不得：</p>
+    <ul>
+      <li>复制、出售、出租、再许可或再分发本游戏；</li>
+      <li>对本游戏进行反向工程、反编译或修改，法律禁止此类限制的情形除外；</li>
+      <li>移除或掩盖任何版权、商标或署名声明；</li>
+      <li>以违反适用法律的方式使用本游戏。</li>
+    </ul>
+
+    <h2>二、广告</h2>
+    <p>本游戏免费游玩，完全靠广告支持运营。使用本游戏即表示你知晓：</p>
+    <ul>
+      <li>关卡之间可能会展示插页广告，但受频率限制约束；</li>
+      <li>激励视频广告是可选的，仅在你主动选择以观看换取游戏内奖励时才展示；</li>
+      <li>我们无法控制第三方广告的内容，也不对其推广的产品或服务负责。</li>
+    </ul>
+    <p>关于广告个性化的选择，详见我们的<a href="topsticks-privacy-policy.html" data-lang-link="topsticks-privacy-policy.html">隐私政策</a>。</p>
+
+    <h2>三、游戏内货币与道具</h2>
+    <div class="card">
+      <p><strong>本游戏不含任何内购项目。</strong>金币、星级与签身皮肤仅存在于游戏内，通过游玩获得。</p>
+      <ul>
+        <li>它们<strong>不具有货币价值</strong>，不能购买、出售、交易，也不能兑换成现金或任何有价物。</li>
+        <li>它们只保存在你的设备上。卸载本游戏、清除其数据或设备丢失，都会永久删除它们，我们无法恢复。</li>
+        <li>我们可能在后续版本中调整货币的获取方式或道具的定价。</li>
+      </ul>
+    </div>
+
+    <h2>四、可用性与变更</h2>
+    <p>我们可能随时更新、变更或停止本游戏或其任何功能。我们不保证本游戏始终可用、始终无错误，或兼容所有设备。玩法内容、难度与关卡设计可能在不同版本间发生变化。</p>
+
+    <h2>五、免责声明</h2>
+    <p>本游戏按"现状"和"现有"提供，不附带任何形式的明示或默示担保。在法律允许的最大范围内，我们否认一切默示担保，包括适销性、特定用途适用性与不侵权担保。</p>
+
+    <h2>六、责任限制</h2>
+    <p>在法律允许的最大范围内，对于因你使用本游戏而产生的任何间接、附带、特殊、后果性或惩罚性损害，或任何数据丢失（包括本地保存的游戏进度）、利润损失、设备损坏，我们不承担责任。</p>
+
+    <h2>七、第三方服务</h2>
+    <p>本游戏集成了 Google AdMob 与 Google 用户消息平台。你对这些服务的使用同样受 Google 自身条款与政策约束。我们不对第三方服务负责。</p>
+
+    <h2>八、终止</h2>
+    <p>你可以随时卸载本游戏以停止使用。若你违反本条款，我们可以暂停或终止你的许可。</p>
+
+    <h2>九、适用法律</h2>
+    <p>本条款适用开发者主要营业地所适用的法律，不适用冲突法规则。本条款中的任何内容，都不限制你依居住国法律所享有的强制性消费者权利。</p>
+
+    <h2>十、条款变更</h2>
+    <p>我们可能会修订本条款，届时上方的版本号与生效日期会同步变更。修订后继续使用本游戏，即表示你接受修订后的条款。</p>
+
+    <h2>十一、联系方式</h2>
+    <p>对本条款有疑问：<a href="mailto:yangqingyuan.dev@gmail.com">yangqingyuan.dev@gmail.com</a></p>
+
+  </article>
+
+  <footer>
+    <span data-lang-block="en">TopSticks is an independent game. This page is the authoritative version of the Terms of Service linked from the Game and from its Google Play listing.</span>
+    <span data-lang-block="zh">拾签（TopSticks）是一款独立开发的作品。本页面是游戏内及 Google Play 商店页面所链接服务条款的正式版本。</span>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'topsticks-doc-lang';
+  var buttons = document.querySelectorAll('[data-set-lang]');
+  var langLinks = document.querySelectorAll('a[data-lang-link]');
+  var TITLES = {
+    en: 'TopSticks — Terms of Service',
+    zh: 'TopSticks — 服务条款'
+  };
+
+  function apply(lang) {
+    var l = lang === 'zh' ? 'zh' : 'en';
+    document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.setAttribute('lang', l === 'zh' ? 'zh-CN' : 'en');
+    document.title = TITLES[l];
+
+    for (var i = 0; i < buttons.length; i++) {
+      var isOn = buttons[i].getAttribute('data-set-lang') === l;
+      buttons[i].classList.toggle('on', isOn);
+      buttons[i].setAttribute('aria-pressed', isOn ? 'true' : 'false');
+    }
+
+    // 站内互链带上语言，避免点过去又跳回另一种语言
+    for (var j = 0; j < langLinks.length; j++) {
+      langLinks[j].setAttribute('href', langLinks[j].getAttribute('data-lang-link') + '?lang=' + l);
+    }
+
+    try { localStorage.setItem(KEY, l); } catch (e) { /* 无痕模式等场景忽略即可 */ }
+  }
+
+  // 优先级：URL 参数（便于商店里直接填中文链接）> 上次选择 > 浏览器语言
+  function initial() {
+    var fromUrl = null;
+    try {
+      fromUrl = new URLSearchParams(location.search).get('lang');
+    } catch (e) { /* 老浏览器忽略 */ }
+    if (fromUrl) return fromUrl;
+
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved) return saved;
+    } catch (e) { /* 同上 */ }
+
+    var nav = (navigator.language || 'en').toLowerCase();
+    return nav.indexOf('zh') === 0 ? 'zh' : 'en';
+  }
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      apply(this.getAttribute('data-set-lang'));
+    });
+  }
+
+  apply(initial());
+})();
+</script>
+</body>
+</html>
