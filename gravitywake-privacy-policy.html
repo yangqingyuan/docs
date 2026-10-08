@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>隐私政策 · Privacy Policy - GravityWake</title>
+  <!--
+    写法依据：docs/gravitywake-feature-spec.md §9（"隐私政策的写法依据：照这个来，别凭空写"）。
+    结构、措辞、双语切换方式与 VolumePower2/3、SickNote、Cube 等同一套（同一宿主、同一套模板）。
+
+    ⚠️ 发布前必须处理的一件事（规格 §9 / tasks.md T59）：
+    "个性化广告与否"尚未决定。当前代码里没有 Google UMP 同意流程，
+    所以第五节**不能**照抄 SickNote 那句"首次启动会通过 UMP 弹出同意对话框"（那是假话）。
+    两条路选一条，然后改第五节第 3 段：
+      A. 强制非个性化广告（NPA）—— 在 AdMob 请求里设 npa=1，本页写明"仅展示非个性化广告"；
+      B. 接入 UMP 同意流程 —— 参照 SickNote/docs/sicknote-privacy-policy.html 第 158-159 行那段措辞。
+  -->
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-light: #C7D2FE;
+      --text: #2b2f33;
+      --text-secondary: #6b7280;
+      --bg: #f7f7fd;
+      --card: #ffffff;
+      --border: #e8e8f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: linear-gradient(135deg, #C7D2FE, #4F46E5);
+      color: #fff;
+      padding: 40px 20px 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 700; }
+    header p { margin-top: 8px; font-size: 13px; opacity: 0.92; }
+    .lang-switch {
+      margin-top: 16px;
+      display: inline-flex;
+      background: rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-switch button.active { background: #fff; color: var(--primary); font-weight: 600; }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 17px; color: var(--primary); margin-bottom: 10px; }
+    p, li { font-size: 14px; color: var(--text); }
+    p + p { margin-top: 8px; }
+    li { margin-left: 20px; margin-bottom: 4px; }
+    .updated { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; font-size: 12px; color: var(--text-secondary); }
+    .en { display: none; }
+    body.lang-en .en { display: block; }
+    body.lang-en .zh { display: none; }
+  </style>
+</head>
+<body class="lang-zh">
+  <header>
+    <h1><span class="zh">GravityWake 隐私政策</span><span class="en">GravityWake Privacy Policy</span></h1>
+    <p class="zh">你的数据只留在你的设备上</p>
+    <p class="en">Your data stays on your device</p>
+    <div class="lang-switch">
+      <button id="btn-en">English</button>
+      <button id="btn-zh" class="active">中文</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2 class="zh">一、我们收集的信息</h2>
+      <h2 class="en">1. Information We Collect</h2>
+      <p class="zh">GravityWake（以下简称"本应用"）是一款<strong>感知式自动开关屏</strong>工具：它用姿态与接近传感器判断手机当前的处境，自动点亮或熄灭屏幕，让你不必去碰电源键。本应用<strong>不收集、不上传任何个人身份信息</strong>：不需要注册账号，不读取你的姓名、手机号、通讯录、短信、位置、照片或通话记录。</p>
+      <p class="zh">为了避免误解，我们把话说成两块，请分别理解：<strong>第一块是传感器与统计</strong> —— 它们只在你的设备内使用，一个字节都不出设备（见第二节）；<strong>第二块是广告</strong> —— 为维持免费运营，应用内展示第三方广告，广告需要联网，广告商可能读取设备广告标识符（见第四、五节）。</p>
+      <p class="en">GravityWake ("the App") is a <strong>sensor-based screen switch</strong>: it uses orientation and proximity sensors to tell what is happening to your phone, and turns the screen on or off so you never have to reach for the power button. The App <strong>does not collect or upload any personally identifiable information</strong>. There is no account, and we do not read your name, phone number, contacts, messages, location, photos, or call logs.</p>
+      <p class="en">To avoid any misunderstanding, please read the following as two separate parts. <strong>Part one is sensors and statistics</strong>: they are used inside your device only and never leave it (see section 2). <strong>Part two is advertising</strong>: to keep the App free it shows third-party ads, which require a network connection and may read your advertising identifier (see sections 4 and 5).</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">二、传感器数据与运行统计</h2>
+      <h2 class="en">2. Sensor Data and Runtime Statistics</h2>
+      <p class="zh">本应用读取<strong>接近传感器</strong>（判断是否被遮挡，如放进兜里）与<strong>加速度计</strong>（判断手机的姿态与动作，如倒扣在桌上、被手拂过）。这些读数<strong>只在设备内参与当下这一次判断</strong>：不写入文件、不上传、不做历史留存，也<strong>不会提供给广告 SDK</strong> —— 广告商拿不到任何传感器数据。</p>
+      <p class="zh">应用内展示的统计（今日亮屏次数、熄屏次数、运行时长）由应用自己在本地记账，保存在你设备的本地存储中，仅用于这一页的展示。<strong>卸载应用或清除应用数据，这些内容会被一并删除。</strong></p>
+      <p class="zh">关于统计准确性：这些数字由应用在后台自行记录与估算，受系统省电策略、后台运行限制、进程被系统回收等因素影响，可能与实际使用情况存在偏差，仅供你个人参考，不代表任何精确统计。</p>
+      <p class="en">The App reads the <strong>proximity sensor</strong> (to tell whether the phone is covered, e.g. inside a pocket) and the <strong>accelerometer</strong> (to tell its orientation and motion, e.g. face-down on a table or a hand passing over it). These readings are used <strong>only on the device, only for the judgement being made at that moment</strong>: they are never written to a file, never uploaded, never kept as history, and <strong>never handed to the ad SDK</strong> — advertisers receive no sensor data from this App at all.</p>
+      <p class="en">The statistics shown in the App (screen-on and screen-off counts, running time) are counted by the App itself and stored in your device's local storage, purely to render that page. <strong>Uninstalling the App or clearing its data deletes them together with everything else.</strong></p>
+      <p class="en">On accuracy: these numbers are recorded and estimated by the App in the background. System power-saving policies, background execution limits, or the process being reclaimed may make them differ from your actual usage. They are for your personal reference only and are not a precise measurement.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">三、权限使用说明</h2>
+      <h2 class="en">3. Permissions We Use</h2>
+      <ul class="zh">
+        <li><strong>前台服务（FOREGROUND_SERVICE / FOREGROUND_SERVICE_SPECIAL_USE）：</strong>感知与开关屏必须持续运行，因此应用以后台前台服务的方式常驻，并在通知栏显示一条常驻状态通知。用途在提审时申报为"锁屏后感知动作以点亮屏幕"。</li>
+        <li><strong>通知（POST_NOTIFICATIONS）：</strong>用于显示上面那条常驻通知，以及"服务被系统挂起过"的提醒。拒绝时其他功能依然可用，但总开关无法开启。</li>
+        <li><strong>唤醒锁（WAKE_LOCK）：</strong>让应用在屏幕熄灭后仍能收到传感器事件 —— 这正是本应用的工作方式。</li>
+        <li><strong>开机自启（RECEIVE_BOOT_COMPLETED）：</strong>重启后恢复后台服务，不需要你再手动打开一次。</li>
+        <li><strong>悬浮窗（SYSTEM_ALERT_WINDOW）：</strong>「一键息屏」的悬浮球需要它。仅在你主动开启该功能时申请，且只用来绘制本应用自己的悬浮球，不会遮挡或修改其他应用的界面。</li>
+        <li><strong>设备管理员：</strong>仅用于执行熄灭屏幕。仅在你主动开启相关功能时申请，可随时在系统设置中撤销。</li>
+        <li><strong>震动（VIBRATE）：</strong>用于手势触发与预备熄屏时的轻微反馈。</li>
+        <li><strong>网络（INTERNET / ACCESS_NETWORK_STATE）：</strong><strong>仅用于加载广告。</strong>本应用自身的感应、判定与统计全部在本地完成，不联网。</li>
+        <li><strong>广告标识（AD_ID）：</strong>由 Google AdMob SDK 读取，仅用于广告投放、频次控制与防欺诈，不用于识别你的身份。</li>
+      </ul>
+      <ul class="en">
+        <li><strong>Foreground service (FOREGROUND_SERVICE / FOREGROUND_SERVICE_SPECIAL_USE):</strong> sensing and screen switching have to keep running, so the App stays alive as a foreground service with a persistent notification. Its declared purpose is "sensing motion after the screen is locked in order to wake the screen".</li>
+        <li><strong>Notifications (POST_NOTIFICATIONS):</strong> used for that persistent notification and for the "the service was suspended" notice. If denied, other features still work, but the master switch cannot be turned on.</li>
+        <li><strong>Wake lock (WAKE_LOCK):</strong> so the App keeps receiving sensor events after the screen goes off — that is how this App works.</li>
+        <li><strong>Boot completed (RECEIVE_BOOT_COMPLETED):</strong> restores the background service after a reboot, so you do not have to start it again.</li>
+        <li><strong>Display over other apps (SYSTEM_ALERT_WINDOW):</strong> needed by the floating ball used for one-tap screen off. Requested only when you turn that feature on, and used only to draw the App's own ball — it never covers or modifies other apps.</li>
+        <li><strong>Device administrator:</strong> used solely to turn the screen off. Requested only when you enable the related feature, and revocable at any time in system settings.</li>
+        <li><strong>Vibrate (VIBRATE):</strong> for light feedback when a gesture fires or a screen-off is being armed.</li>
+        <li><strong>Internet (INTERNET / ACCESS_NETWORK_STATE):</strong> <strong>used solely to load ads.</strong> All of the App's own sensing, judging and counting happens locally, without network access.</li>
+        <li><strong>Advertising ID (AD_ID):</strong> read by the Google AdMob SDK solely for ad delivery, frequency capping and fraud prevention. It is not used to identify you.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">四、我们明确不做的事</h2>
+      <h2 class="en">4. What We Do Not Do</h2>
+      <ul class="zh">
+        <li><strong>不使用无障碍服务</strong> —— 不读取屏幕内容，不模拟点击。同类应用常以无障碍实现，本应用刻意不用。</li>
+        <li><strong>不申请「忽略电池优化」</strong>（<code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>）。若你的设备会冻结后台应用，我们只在设置页给出说明并引导你自行前往系统设置。</li>
+        <li><strong>不申请「使用情况访问」</strong>（<code>PACKAGE_USAGE_STATS</code>）—— 不读取你正在使用哪个应用。</li>
+        <li>不读取短信、通话记录、通讯录、位置、相册；不申请这些权限。</li>
+      </ul>
+      <ul class="en">
+        <li><strong>No accessibility service</strong> — we do not read screen content and do not simulate taps. Many apps in this category rely on accessibility; this one deliberately does not.</li>
+        <li><strong>No "ignore battery optimizations" request</strong> (<code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>). If your device freezes background apps, we only explain this in Settings and guide you to the system page yourself.</li>
+        <li><strong>No usage-access permission</strong> (<code>PACKAGE_USAGE_STATS</code>) — we do not read which app you are currently using.</li>
+        <li>We do not read messages, call logs, contacts, location or photos, and we do not request those permissions.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">五、第三方 SDK 与广告</h2>
+      <h2 class="en">5. Third-Party SDK and Advertising</h2>
+      <p class="zh">为维持免费运营，本应用接入 <strong>Google AdMob</strong> 广告（<code>play-services-ads</code>）—— 这是本应用<strong>唯一的第三方 SDK</strong>。广告形式包括底部横幅、插页、开屏与激励视频（看完一条视频可获一段时间免广告）。广告 SDK 可能依据其自身政策收集设备广告标识符（如 AAID）等常规信息，用于广告投放、频次控制与防欺诈；相关信息处理遵循 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私政策</a>。<strong>本应用不会向广告 SDK 提供你的任何个人信息，广告 SDK 也拿不到任何传感器数据。</strong></p>
+      <p class="zh">关于个性化：广告是否个性化由 AdMob 的设置与你所在地区决定。你可以随时在系统设置中<strong>重置或删除广告 ID</strong>（Android 设置 → 隐私 → 广告），这会减少基于该标识符的个性化投放。</p>
+      <p class="zh">应用内另有一个<strong>可选的一次性内购「永久去广告」</strong>，用于永久移除广告。付款由 <strong>Google Play 结算</strong>处理：我们不接触、也无法获得你的支付信息或真实身份。退款与订单查询请按 Google Play 的政策办理。</p>
+      <p class="en">To keep the App free, it uses <strong>Google AdMob</strong> advertising (<code>play-services-ads</code>) — the App's <strong>only third-party SDK</strong>. Ad formats include a bottom banner, interstitials, an app-open ad, and a rewarded video (watch one video to earn some ad-free time). The SDK may collect routine information such as the advertising identifier (AAID) under its own policy, for ad delivery, frequency capping and fraud prevention; that handling follows the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. <strong>The App provides no personal information to the ad SDK, and the ad SDK receives no sensor data.</strong></p>
+      <p class="en">On personalization: whether ads are personalized depends on AdMob's settings and your region. You can <strong>reset or delete your advertising ID</strong> at any time in system settings (Android Settings → Privacy → Ads), which reduces personalization based on that identifier.</p>
+      <p class="en">The App also offers an <strong>optional one-time "Remove ads" purchase</strong> that removes ads permanently. Payment is handled by <strong>Google Play Billing</strong>: we never see and cannot obtain your payment details or your real identity. Refunds and order questions follow Google Play's own policies.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、你的权利</h2>
+      <h2 class="en">6. Your Rights</h2>
+      <p class="zh">因为本应用<strong>从不收集</strong>你的个人信息，我们这里没有任何关于你的数据可供导出、更正或删除 —— 这不是在回避，而是事实本身。你对自己设备上的数据拥有完全的控制：</p>
+      <ul class="zh">
+        <li><strong>随时撤销任何权限：</strong>在系统设置里关掉通知、悬浮窗、设备管理员或网络权限。撤销后需要使用它的功能会失效，其余功能不受影响。</li>
+        <li><strong>随时停止后台运行：</strong>关掉首屏的总开关即可，应用不会继续感知。</li>
+        <li><strong>删除全部本地数据：</strong>卸载应用，或在系统设置里清除应用数据。统计、开关设置与免广告剩余时长都在其中（<strong>免广告时长只存在于本机，卸载重装或换设备后不再有效</strong>）。</li>
+        <li><strong>控制广告标识：</strong>在系统设置中重置或删除广告 ID。</li>
+        <li><strong>内购相关：</strong>付款与订单由 Google Play 处理，我们接触不到你的支付信息；退款请按 Google Play 的退款流程办理，退款成功后这笔购买会失效，「永久去广告」随之收回。已购买的「永久去广告」跟随你的 Google 账号，重装后会自动恢复。</li>
+      </ul>
+      <p class="en">Because the App <strong>never collects</strong> your personal information, we hold no data about you that could be exported, corrected or deleted — that is not a dodge, it is simply the case. What is on your device stays under your control:</p>
+      <ul class="en">
+        <li><strong>Revoke any permission at any time</strong> in system settings — notifications, overlay, device administrator or network. The features that need it stop working; nothing else is affected.</li>
+        <li><strong>Stop background operation at any time</strong> with the master switch on the first screen; the App stops sensing.</li>
+        <li><strong>Delete all local data</strong> by uninstalling the App or clearing its data. This includes statistics, switch settings and any remaining ad-free time (<strong>ad-free time lives on this device only — uninstalling or switching phones ends it</strong>).</li>
+        <li><strong>Control your advertising ID</strong> by resetting or deleting it in system settings.</li>
+        <li><strong>Purchases:</strong> payment and orders are handled by Google Play, so we never see your payment details; refunds follow Google Play's refund process, and once refunded that purchase is voided and "Remove ads" is revoked accordingly. The purchase follows your Google account and is restored automatically after reinstalling.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">七、儿童隐私</h2>
+      <h2 class="en">7. Children's Privacy</h2>
+      <p class="zh">本应用不面向 13 周岁以下儿童，也不会故意收集儿童的个人信息。</p>
+      <p class="en">The App is not directed to children under 13 and does not knowingly collect personal information from children.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">八、政策变更</h2>
+      <h2 class="en">8. Changes to This Policy</h2>
+      <p class="zh">我们可能根据产品与法规变化适时更新本政策，更新后的内容将在本页面发布并标注新的更新日期。继续使用本应用即视为接受更新后的政策。</p>
+      <p class="en">We may update this policy from time to time. Revised content will be posted on this page with a new date. Continued use of the App constitutes acceptance of the updated policy.</p>
+      <p class="updated zh">最后更新：2026 年 10 月 8 日</p>
+      <p class="updated en">Last updated: October 8, 2026</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">九、联系我们</h2>
+      <h2 class="en">9. Contact Us</h2>
+      <p class="zh">如对本政策有任何疑问，请发送邮件至：<a href="mailto:455647783@qq.com">455647783@qq.com</a>。</p>
+      <p class="en">If you have any questions about this policy, email us at <a href="mailto:455647783@qq.com">455647783@qq.com</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="zh">© 2026 GravityWake · <a href="gravitywake-terms-of-service.html">用户协议</a></span>
+    <span class="en">© 2026 GravityWake · <a href="gravitywake-terms-of-service.html">Terms of Service</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      var zhBtn = document.getElementById('btn-zh');
+      var enBtn = document.getElementById('btn-en');
+      function apply(lang) {
+        document.body.className = 'lang-' + lang;
+        zhBtn.classList.toggle('active', lang === 'zh');
+        enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('gw-lang', lang); } catch (e) {}
+      }
+      zhBtn.addEventListener('click', function () { apply('zh'); });
+      enBtn.addEventListener('click', function () { apply('en'); });
+      var saved = null;
+      try { saved = localStorage.getItem('gw-lang'); } catch (e) {}
+      if (saved === 'zh' || saved === 'en') {
+        apply(saved);
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0) {
+        apply('zh');
+      }
+    })();
+  </script>
+</body>
+</html>

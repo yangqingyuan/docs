@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>用户协议 · Terms of Service - GravityWake</title>
+  <!--
+    写法依据：docs/gravitywake-feature-spec.md §9（合规与商店）与 §7（可行性风险矩阵）。
+    第五节「免责声明」的每一条都对应规格里的既有结论，并与应用内那个首次启动知悉框
+    （WelcomeDialog）的口径保持一致 —— 两处说法不一致，用户会以为是两回事。
+    结构、措辞、双语切换方式与 VolumePower2/3、SickNote 同一套模板。
+  -->
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-light: #C7D2FE;
+      --text: #2b2f33;
+      --text-secondary: #6b7280;
+      --bg: #f7f7fd;
+      --card: #ffffff;
+      --border: #e8e8f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: linear-gradient(135deg, #C7D2FE, #4F46E5);
+      color: #fff;
+      padding: 40px 20px 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 22px; font-weight: 700; }
+    header p { margin-top: 8px; font-size: 13px; opacity: 0.92; }
+    .lang-switch {
+      margin-top: 16px;
+      display: inline-flex;
+      background: rgba(255,255,255,0.2);
+      border-radius: 999px;
+      padding: 3px;
+    }
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-switch button.active { background: #fff; color: var(--primary); font-weight: 600; }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 17px; color: var(--primary); margin-bottom: 10px; }
+    p, li { font-size: 14px; color: var(--text); }
+    p + p { margin-top: 8px; }
+    li { margin-left: 20px; margin-bottom: 4px; }
+    .updated { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; font-size: 12px; color: var(--text-secondary); }
+    .en { display: none; }
+    body.lang-en .en { display: block; }
+    body.lang-en .zh { display: none; }
+  </style>
+</head>
+<body class="lang-zh">
+  <header>
+    <h1><span class="zh">GravityWake 用户协议</span><span class="en">GravityWake Terms of Service</span></h1>
+    <p class="zh">使用前请阅读</p>
+    <p class="en">Please read before use</p>
+    <div class="lang-switch">
+      <button id="btn-en">English</button>
+      <button id="btn-zh" class="active">中文</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2 class="zh">一、协议接受</h2>
+      <h2 class="en">1. Acceptance of Terms</h2>
+      <p class="zh">下载、安装或使用 GravityWake（以下简称"本应用"），即表示你已阅读并同意本协议的全部条款。如果你不同意本协议，请停止使用本应用。</p>
+      <p class="en">By downloading, installing or using GravityWake ("the App"), you agree to be bound by all the terms of this agreement. If you do not agree, please stop using the App.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">二、服务说明</h2>
+      <h2 class="en">2. Service Description</h2>
+      <p class="zh">本应用是一款<strong>感知式自动开关屏</strong>工具：用姿态与接近传感器判断手机的处境，自动点亮或熄灭屏幕（拿起亮屏、倒扣熄屏、进兜锁屏、手拂过顶部点亮），让你不必去碰电源键。为实现该功能，应用会以<strong>后台前台服务</strong>的方式常驻运行，并在屏幕熄灭后继续接收传感器事件。</p>
+      <p class="zh">为维持免费运营，应用内展示由第三方（Google AdMob）提供的广告；你也可选择观看激励视频换取一段免广告时间，或通过一次性的应用内购买<strong>永久移除广告</strong>。</p>
+      <p class="en">The App is a <strong>sensor-based screen switch</strong>: it uses orientation and proximity sensors to tell what is happening to your phone and turns the screen on or off accordingly (wake when you pick it up, sleep when you turn it face-down or pocket it, wake when a hand passes over the top) so you never have to reach for the power button. To do this it runs as a <strong>persistent foreground service</strong> and keeps receiving sensor events after the screen goes off.</p>
+      <p class="en">To keep the App free, it shows ads served by a third party (Google AdMob). You may also watch a rewarded video for a period of ad-free use, or <strong>remove ads permanently</strong> with a one-time in-app purchase.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">三、权限与功能说明</h2>
+      <h2 class="en">3. Permissions and Features</h2>
+      <ul class="zh">
+        <li><strong>通知：</strong>用于前台服务的常驻状态通知，以及"服务被系统挂起过"的提醒。</li>
+        <li><strong>设备管理员：</strong>仅用于熄灭屏幕，仅在你主动开启相关功能时申请，可随时在系统设置中撤销。</li>
+        <li><strong>悬浮窗（显示在其他应用上层）：</strong>用于「一键息屏」的悬浮球，仅在你主动开启后生效，只绘制本应用自己的悬浮球。</li>
+        <li><strong>开机自启：</strong>重启后恢复后台服务，不需要你再手动打开一次。</li>
+        <li><strong>网络：</strong>仅用于加载广告。本应用自身的感应、判定与统计全部在本地完成。</li>
+        <li><strong>本应用不使用无障碍服务</strong>，也不申请「忽略电池优化」与「使用情况访问」权限。权限的完整清单与用途见<a href="gravitywake-privacy-policy.html">隐私政策</a>第三节。</li>
+      </ul>
+      <ul class="en">
+        <li><strong>Notifications:</strong> for the foreground service's persistent notification and for the "the service was suspended" notice.</li>
+        <li><strong>Device administrator:</strong> used solely to turn the screen off, requested only when you enable the related feature, and revocable at any time in system settings.</li>
+        <li><strong>Display over other apps (overlay):</strong> for the floating ball used by one-tap screen off; active only after you enable it, and used only to draw the App's own ball.</li>
+        <li><strong>Boot completed:</strong> restores the background service after a reboot, so you do not have to start it again.</li>
+        <li><strong>Internet:</strong> used solely to load ads. All of the App's own sensing, judging and counting happens locally.</li>
+        <li><strong>The App does not use an accessibility service</strong>, and does not request "ignore battery optimizations" or usage-access permissions. For the full permission list, see section 3 of the <a href="gravitywake-privacy-policy.html">Privacy Policy</a>.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">四、广告与内购</h2>
+      <h2 class="en">4. Ads and Purchases</h2>
+      <ul class="zh">
+        <li>广告由 Google AdMob 提供，其内容与行为由广告商及其平台负责；本应用无法控制具体展示哪一条广告。</li>
+        <li><strong>「看视频免广告」得到的是本机的一段时间</strong>：该时长保存在你的设备本地，<strong>卸载重装、清除应用数据后即失效，也不会跟随你换到另一台设备</strong>。</li>
+        <li><strong>「永久去广告」是一次性内购</strong>，付款与订单由 Google Play 处理，跟随你的 Google 账号 —— 重装应用后会自动恢复。</li>
+        <li><strong>想退款：</strong>本应用内没有退款入口，请按 Google Play 的退款流程办理。</li>
+        <li><strong>退款成功后广告会恢复。</strong>该笔购买会被 Google Play 置为失效，应用重新查询时即收回「永久去广告」—— 这是应有的行为，不是故障。</li>
+        <li>本条款不影响你所在地法律赋予你的、不可放弃的权利。</li>
+        <li>购买前请确认商品说明与价格（价格由 Google Play 按你的地区与币种给出）。</li>
+      </ul>
+      <ul class="en">
+        <li>Ads are served by Google AdMob; their content and behaviour are the responsibility of the advertisers and their platform. The App cannot control which specific ad is shown.</li>
+        <li><strong>The rewarded video grants ad-free time on this device only.</strong> It is stored locally, so it is <strong>lost when you uninstall the App or clear its data, and does not follow you to another device</strong>.</li>
+        <li><strong>"Remove ads" is a one-time purchase</strong> handled by Google Play Billing and tied to your Google account — it is restored automatically after reinstalling.</li>
+        <li><strong>Refunds:</strong> there is no refund button inside the App; please follow Google Play's refund process.</li>
+        <li><strong>After a refund, ads come back.</strong> Google Play voids that purchase, and the App revokes "Remove ads" the next time it checks — that is intended behaviour, not a fault.</li>
+        <li>These terms do not affect any rights you have under mandatory law in your region that cannot be waived.</li>
+        <li>Please check the item description and price before purchasing (the price is given by Google Play for your region and currency).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">五、免责声明</h2>
+      <h2 class="en">5. Disclaimer</h2>
+      <ul class="zh">
+        <li><strong>不保证在所有设备上都有效。</strong>本应用依赖厂商 ROM 的传感器与后台策略，不同品牌、不同系统版本上的行为可能不同，部分机型上某些方式可能不生效。</li>
+        <li><strong>灭屏后的事件投递取决于系统。</strong>部分系统在深度待机后可能不再向应用投递接近传感器事件，导致挥手唤醒、或口袋模式中"掏出亮屏"不生效。</li>
+        <li><strong>被系统冻结或强制停止时，所有方式都不会工作。</strong>这是"开着却没反应"最常见的原因；设置页有电池优化的说明。</li>
+        <li><strong>亮灭屏由传感器自动判定，可能误判。</strong>例如把某个姿势误判为"已放进兜里"而熄屏。重要场合请仍以系统电源键为准，不要把它当作唯一手段。</li>
+        <li><strong>统计数字仅供参考。</strong>应用内展示的亮屏 / 熄屏次数与运行时长由应用自行记录与估算，受系统策略影响可能与实际存在偏差，不构成任何精确统计。</li>
+        <li><strong>本应用按"原样"提供</strong>，不承诺服务永不中断、无错误，也不对因使用或无法使用本应用而产生的任何直接或间接损失承担责任。</li>
+      </ul>
+      <ul class="en">
+        <li><strong>We do not guarantee it works on every device.</strong> The App depends on each vendor's sensor and background policies, so behaviour differs across brands and OS versions, and some ways may not take effect on some phones.</li>
+        <li><strong>Event delivery after the screen turns off is up to the system.</strong> Some systems stop delivering proximity events after deep idle, which can make wave-to-wake, or "take it out of the pocket to wake", fail to fire.</li>
+        <li><strong>If the system freezes or force-stops the App, nothing works.</strong> This is the most common cause of "it is on but nothing happens"; the Settings page explains battery optimization.</li>
+        <li><strong>The screen is switched on a judgement call from the sensors, and that call can be wrong</strong> — for example mistaking a posture for "in a pocket" and turning the screen off. In important moments, use the power button; do not rely on this App as your only means.</li>
+        <li><strong>Statistics are for reference only.</strong> Screen-on/off counts and running time are recorded and estimated by the App; system policies may make them differ from actual usage. They are not a precise measurement.</li>
+        <li><strong>The App is provided "as is"</strong>, without warranty of uninterrupted or error-free operation, and the developer is not liable for any direct or indirect loss arising from the use or inability to use the App.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、用户责任</h2>
+      <h2 class="en">6. User Responsibilities</h2>
+      <ul class="zh">
+        <li>遵守你所在地区的法律法规，不将本应用用于非法用途或干扰他人。</li>
+        <li>自行判断使用场景：电力紧张、需要绝对可靠的场合（如驾驶、医疗、安全相关场景），请以系统按键与系统设置为准。</li>
+        <li>理解关闭总开关、撤销权限、开启系统省电模式等操作会让你自己失去相应功能。</li>
+        <li>妥善保管自己的 Google 账号与购买凭据。</li>
+      </ul>
+      <ul class="en">
+        <li>Comply with the laws and regulations of your region, and do not use the App for unlawful purposes or to disturb others.</li>
+        <li>Judge the situation yourself: where reliability matters most (driving, medical or safety-related situations), rely on the system's own buttons and settings.</li>
+        <li>Understand that turning off the master switch, revoking permissions, or enabling aggressive battery saving will take the corresponding features away from you.</li>
+        <li>Keep your Google account and purchase credentials safe.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">七、知识产权</h2>
+      <h2 class="en">7. Intellectual Property</h2>
+      <p class="zh">本应用的名称、图标、界面与代码的著作权及相关权利归开发者所有。未经许可，不得反编译、反向工程、二次分发或将其用于商业用途（法律允许的情形除外）。本应用使用的第三方组件（如 Google AdMob、Google Play 结算）归其各自权利人所有，并受其各自条款约束。</p>
+      <p class="en">Copyright and related rights in the App's name, icon, interface and code belong to the developer. You may not decompile, reverse-engineer, redistribute or use them commercially without permission, except as permitted by law. Third-party components (such as Google AdMob and Google Play Billing) belong to their respective owners and are governed by their own terms.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">八、协议变更</h2>
+      <h2 class="en">8. Changes to These Terms</h2>
+      <p class="zh">我们可能根据产品与法规变化适时更新本协议，更新后的内容将在本页面发布并标注新的更新日期。继续使用本应用即视为接受更新后的协议。</p>
+      <p class="en">We may update these terms from time to time. Revised content will be posted on this page with a new date. Continued use of the App constitutes acceptance of the updated terms.</p>
+      <p class="updated zh">最后更新：2026 年 10 月 8 日</p>
+      <p class="updated en">Last updated: October 8, 2026</p>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">九、联系我们</h2>
+      <h2 class="en">9. Contact Us</h2>
+      <p class="zh">如对本协议有任何疑问，请发送邮件至：<a href="mailto:455647783@qq.com">455647783@qq.com</a>。与本应用如何处理数据有关的问题，另见<a href="gravitywake-privacy-policy.html">隐私政策</a>。</p>
+      <p class="en">If you have any questions about these terms, email us at <a href="mailto:455647783@qq.com">455647783@qq.com</a>. For how the App handles data, see the <a href="gravitywake-privacy-policy.html">Privacy Policy</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="zh">© 2026 GravityWake · <a href="gravitywake-privacy-policy.html">隐私政策</a></span>
+    <span class="en">© 2026 GravityWake · <a href="gravitywake-privacy-policy.html">Privacy Policy</a></span>
+  </footer>
+
+  <script>
+    (function () {
+      var zhBtn = document.getElementById('btn-zh');
+      var enBtn = document.getElementById('btn-en');
+      function apply(lang) {
+        document.body.className = 'lang-' + lang;
+        zhBtn.classList.toggle('active', lang === 'zh');
+        enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('gw-lang', lang); } catch (e) {}
+      }
+      zhBtn.addEventListener('click', function () { apply('zh'); });
+      enBtn.addEventListener('click', function () { apply('en'); });
+      var saved = null;
+      try { saved = localStorage.getItem('gw-lang'); } catch (e) {}
+      if (saved === 'zh' || saved === 'en') {
+        apply(saved);
+      } else if (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0) {
+        apply('zh');
+      }
+    })();
+  </script>
+</body>
+</html>
