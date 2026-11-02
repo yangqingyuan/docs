@@ -86,14 +86,14 @@
     <section class="card">
       <h2 class="zh">一、我们收集的信息</h2>
       <h2 class="en">1. Information We Collect</h2>
-      <p class="zh">本应用为纯本地工具，<strong>不收集、不上传任何个人身份信息</strong>。我们不会要求你注册账号，也不会收集你的姓名、手机号、通讯录、位置等信息。你在应用内产生的所有数据（如运行时长统计）均仅存储在你设备本地。</p>
-      <p class="en">The App is a fully local utility. We <strong>do not collect or upload any personally identifiable information</strong>. No account is required, and we do not collect your name, phone number, contacts, or location. All data generated in the app (e.g., running-time statistics) is stored locally on your device only.</p>
+      <p class="zh">本应用为本地工具，<strong>不要求注册账号，也不收集你的姓名、手机号、通讯录、位置等个人身份信息</strong>。你在应用内产生的运行时长、开关状态等数据仅保存在设备本地。为改进功能与稳定性，应用会上报不含个人身份信息的匿名使用统计，详见第四节。</p>
+      <p class="en">The App is a local utility. <strong>No account is required, and we do not collect personally identifiable information such as your name, phone number, contacts, or location.</strong> Data generated in the app (e.g., running-time statistics and switch states) is stored locally on your device. To improve features and stability, the App reports anonymous usage statistics that contain no personally identifiable information; see Section 4.</p>
     </section>
 
     <section class="card">
       <h2 class="zh">二、数据存储与安全</h2>
       <h2 class="en">2. Data Storage and Security</h2>
-      <p class="zh">运行时长统计、开关状态等数据以本地存储的方式保存在你的设备中（SharedPreferences 文件），不会被传输到任何服务器。卸载应用后，相关本地数据将被一并清除。</p>
+      <p class="zh">运行时长统计、开关状态等数据以本地存储的方式保存在你的设备中（SharedPreferences 文件），不会被上传。卸载应用后，相关本地数据将被一并清除。匿名使用统计会单独上报至 Google Firebase（见第四节），其中不包含上述本地明细。</p>
       <p class="zh">关于统计准确性：应用内展示的「运行时长」「亮屏次数」等统计数据由应用在后台自行记录与估算，仅保存在设备本地。受系统省电策略、后台限制或进程被系统回收等因素影响，统计结果可能与实际使用情况存在偏差，仅供你个人查看参考，不代表任何精确统计。</p>
       <p class="en">Running-time statistics and switch states are stored locally on your device (SharedPreferences) and are never transmitted to any server. Uninstalling the app removes all related local data.</p>
       <p class="en">About accuracy of statistics: Runtime and wake-up counts shown in the App are recorded and estimated by the App in the background and stored only on your device. Due to system power-saving policies, background restrictions, or the process being reclaimed, they may differ from your actual usage. They are provided for your personal reference only and do not represent any precise measurement.</p>
@@ -106,21 +106,25 @@
         <li><strong>通知权限：</strong>用于在前台服务中显示常驻状态通知，并支持从通知栏一键锁屏。</li>
         <li><strong>设备管理员权限：</strong>用于执行「通知栏一键锁屏」，仅在用户主动授权后使用。</li>
         <li><strong>悬浮窗权限（显示在其他应用上层）：</strong>用于显示「悬浮锁屏」的悬浮球，点击即可一键熄屏；需你在系统设置中主动开启，仅用于绘制本应用自己的悬浮球，不会遮挡或修改其他应用的界面。</li>
-        <li><strong>开机自启（BOOT_COMPLETED）：</strong>用于开机后按用户设置恢复后台服务（可在设置中关闭）。</li>
+        <li><strong>开机自启（BOOT_COMPLETED）：</strong>用于开机后恢复后台服务，保证锁屏音量键亮屏持续可用。</li>
       </ul>
       <ul class="en">
         <li><strong>Notifications:</strong> to show the persistent foreground-service notification and enable one-tap screen lock from the notification shade.</li>
         <li><strong>Device Administrator:</strong> to perform "lock screen from notification"; used only after you grant it explicitly.</li>
         <li><strong>Display over other apps (overlay):</strong> to show the optional floating ball for one-tap screen off; you must enable it yourself in system settings, and it is used only to draw the App's own floating ball — it never covers or modifies other apps.</li>
-        <li><strong>Boot completed:</strong> to restore the background service after reboot according to your setting (can be disabled in Settings).</li>
+        <li><strong>Boot completed:</strong> to restore the background service after reboot so that volume-key screen wake keeps working.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2 class="zh">四、第三方 SDK（广告）</h2>
-      <h2 class="en">4. Third-Party SDK (Ads)</h2>
+      <h2 class="zh">四、第三方 SDK 与匿名统计</h2>
+      <h2 class="en">4. Third-Party SDKs and Anonymous Analytics</h2>
       <p class="zh">为维持免费运营，本应用集成了 Google AdMob 广告 SDK。该 SDK 可能依据其自身的隐私政策收集设备广告标识符（如 AAID）等信息，用于展示与衡量广告。广告相关数据的处理遵循 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私政策</a>，本应用不会向广告 SDK 提供你的任何个人身份信息。</p>
       <p class="en">To keep the App free, it integrates the Google AdMob advertising SDK. The SDK may collect advertising identifiers (e.g., AAID) and related information for serving and measuring ads, in accordance with its own privacy policy. Ad-related data handling follows the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. We do not provide the ad SDK with any personally identifiable information about you.</p>
+      <p class="zh">为了解功能使用情况与运行稳定性，本应用集成了 Google Firebase Analytics。它会以匿名方式记录页面浏览、开关状态、唤醒结果等事件，并附带应用版本、设备型号、系统版本、语言、粗略地区和应用实例 ID。这些数据不包含姓名、手机号等个人身份信息，仅用于产品改进与问题排查；在你同意本政策之前，应用不会主动上报这些统计事件。</p>
+      <p class="en">To understand feature usage and stability, the App uses Google Firebase Analytics. It records events such as screen views, switch states, and wake-up results in an anonymous form, together with app version, device model, OS version, language, coarse region, and an app instance ID. This data contains no personally identifiable information and is used only for product improvement and troubleshooting; the App does not send these analytics events before you agree to this policy.</p>
+      <p class="zh">应用内购买「永久去广告」通过 Google Play 结算服务完成。开发者不接触、不存储你的支付卡号或账单地址；应用仅在本地记录「是否已购买」这一状态。相关支付数据的处理遵循 Google Play 的隐私政策与交易条款。</p>
+      <p class="en">The "Remove ads forever" in-app purchase is handled by Google Play Billing. The developer never receives or stores your card number or billing address; the App only keeps a local flag indicating whether the purchase is active. Payment data is handled under Google Play's privacy policy and transaction terms.</p>
     </section>
 
     <section class="card">
@@ -135,8 +139,8 @@
       <h2 class="en">6. Changes to This Policy</h2>
       <p class="zh">我们可能根据产品与法规变化适时更新本政策，更新后的内容将在本页面发布并标注新的更新日期。继续使用本应用即视为接受更新后的政策。</p>
       <p class="en">We may update this policy from time to time. Revised content will be posted on this page with a new date. Continued use of the App constitutes acceptance of the updated policy.</p>
-      <p class="updated zh">最后更新：2026 年 9 月 11 日</p>
-      <p class="updated en">Last updated: September 11, 2026</p>
+      <p class="updated zh">最后更新：2026 年 11 月 2 日</p>
+      <p class="updated en">Last updated: November 2, 2026</p>
     </section>
 
     <section class="card">
