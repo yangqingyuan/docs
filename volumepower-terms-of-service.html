@@ -93,8 +93,8 @@
     <section class="card">
       <h2 class="zh">二、服务说明</h2>
       <h2 class="en">2. Service Description</h2>
-      <p class="zh">本应用是一款锁屏工具，核心功能为：锁屏时按音量键点亮屏幕。为实现该功能，应用会以后台前台服务方式常驻运行，并监听屏幕开关与音量键广播；屏幕熄灭时以极低功耗静音音频保活。为维持免费运营，应用内展示由第三方（Google AdMob）提供的广告，广告内容与行为遵循其所属广告商的条款。</p>
-      <p class="en">The App is a screen-lock utility whose core feature is lighting up the screen with the volume keys while the device is locked. To deliver this feature, the App runs as a persistent foreground service and listens to screen and volume-key broadcasts; it uses a low-power silent audio keep-alive while the screen is off. To keep the App free, ads are served by a third party (Google AdMob); ad content and behavior are subject to the terms of the respective advertisers.</p>
+      <p class="zh">本应用是一款锁屏工具，主要功能包括：锁屏时按音量键点亮屏幕、摇一摇唤醒、按设定时间每天自动唤醒、从通知栏或悬浮球一键熄屏，以及本地运行统计。为实现锁屏亮屏，应用会以前台服务方式常驻运行，并监听屏幕开关与音量键广播；屏幕熄灭时以极低功耗静音音频保活。应用内展示由第三方（Google AdMob）提供的广告；你也可以通过一次性购买「永久去广告」移除广告（见第五节）。</p>
+      <p class="en">The App is a screen-lock utility. Its main features are: lighting up the screen with the volume keys while the device is locked, shake-to-wake, scheduled daily wake-ups, one-tap screen off from the notification shade or a floating ball, and local usage statistics. To deliver screen wake, the App runs as a persistent foreground service and listens to screen and volume-key broadcasts; it uses a low-power silent audio keep-alive while the screen is off. Ads are served by a third party (Google AdMob); you can also remove them with a one-time "Remove ads forever" purchase (see Section 5).</p>
     </section>
 
     <section class="card">
@@ -103,7 +103,7 @@
       <ul class="zh">
         <li><strong>通知栏锁屏：</strong>该功能需要设备管理员权限，仅在用户主动授权后可用，用于执行一键熄屏。</li>
         <li><strong>悬浮锁屏：</strong>该功能需要「显示在其他应用上层」（悬浮窗）权限，仅在用户主动开启后生效，用于显示悬浮球并一键熄屏。</li>
-        <li><strong>开机自启：</strong>开机后自动恢复后台服务，可在设置中关闭。</li>
+        <li><strong>开机自启：</strong>开机后自动恢复后台服务，保证锁屏音量键亮屏持续可用。</li>
         <li>以上权限与功能均以"为用户提供服务"为目的，不用于收集或利用用户数据。</li>
       </ul>
       <ul class="en">
@@ -121,19 +121,38 @@
         <li>亮屏功能依赖系统广播与硬件状态，因设备厂商限制、省电策略、系统更新等原因可能导致功能失效或延迟，本应用不保证功能绝对可用与及时。</li>
         <li>统计页展示的运行时长、亮屏次数等数据由本应用在后台自行记录估算，可能受系统省电策略、后台限制或进程被系统回收等因素影响而与实际存在偏差，数据仅供参考，本应用不对其准确性作任何承诺。</li>
         <li>本应用为辅助工具，用户因使用或无法使用本应用产生的任何直接或间接损失，开发者不承担责任。</li>
+        <li>「每天唤醒」依赖系统后台任务调度（WorkManager）。系统省电策略、厂商后台限制或任务被清理时，唤醒可能延迟或完全跳过，本应用不保证到点必定亮屏。</li>
         <li>本应用按"原样"提供，不承诺服务永不中断或无错误。</li>
       </ul>
       <ul class="en">
         <li>The screen-lighting feature relies on system broadcasts and hardware state. Device-vendor restrictions, battery-saving policies, or system updates may cause failure or delay; the App does not guarantee absolute availability or timeliness.</li>
         <li>Runtime and wake-up counts shown on the Stats page are recorded and estimated by the App in the background. Due to power-saving policies, background restrictions, or the process being reclaimed, they may differ from actual usage. They are provided for reference only, and the developer makes no guarantee as to their accuracy.</li>
         <li>The App is an auxiliary tool. The developer is not liable for any direct or indirect loss arising from the use or inability to use the App.</li>
+        <li>Scheduled wake-up relies on system background task scheduling (WorkManager). Due to power-saving policies, vendor background restrictions, or task cleanup, the wake-up may be delayed or skipped entirely; the App does not guarantee that the screen will light up at the exact time.</li>
         <li>The App is provided "as is" without warranty of uninterrupted or error-free operation.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2 class="zh">五、用户责任</h2>
-      <h2 class="en">5. User Responsibilities</h2>
+      <h2 class="zh">五、应用内购买</h2>
+      <h2 class="en">5. In-App Purchases</h2>
+      <ul class="zh">
+        <li>本应用提供一次性商品「永久去广告」（商品 ID：remove_ads）。购买后永久移除应用内广告，不涉及订阅或自动续费。</li>
+        <li>购买与支付由 Google Play 结算服务处理，开发者不接触、不存储你的支付卡号或账单信息；实际价格以 Google Play 商店页面显示为准。</li>
+        <li>退款、撤销与争议处理遵循 Google Play 的相关政策。若购买被退款或撤销，广告将恢复显示。</li>
+        <li>更换设备或重装应用后，可在同一 Google 账号下通过「恢复购买」找回已购买状态。</li>
+      </ul>
+      <ul class="en">
+        <li>The App offers a one-time "Remove ads forever" product (ID: remove_ads). It removes in-app ads permanently and is not a subscription or auto-renewing plan.</li>
+        <li>Purchases and payments are processed by Google Play Billing. The developer never receives or stores your card number or billing information; the actual price is the one shown on the Google Play store page.</li>
+        <li>Refunds, revocations, and disputes follow Google Play policies. If a purchase is refunded or revoked, ads will reappear.</li>
+        <li>After changing devices or reinstalling the App, you can restore the purchase with the same Google account.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="zh">六、用户责任</h2>
+      <h2 class="en">6. User Responsibilities</h2>
       <ul class="zh">
         <li>你不得利用本应用从事任何违反法律法规的活动；</li>
         <li>你应自行评估是否授权设备管理员、通知等权限，并在不需要时及时关闭；</li>
@@ -147,24 +166,24 @@
     </section>
 
     <section class="card">
-      <h2 class="zh">六、知识产权</h2>
-      <h2 class="en">6. Intellectual Property</h2>
+      <h2 class="zh">七、知识产权</h2>
+      <h2 class="en">7. Intellectual Property</h2>
       <p class="zh">本应用的全部代码、界面、图标及相关内容的知识产权归开发者所有。未经许可，不得复制、修改、传播或用于商业用途。</p>
       <p class="en">All code, UI, icons, and related content of the App are owned by the developer. You may not copy, modify, distribute, or commercially use them without permission.</p>
     </section>
 
     <section class="card">
-      <h2 class="zh">七、协议变更</h2>
-      <h2 class="en">7. Changes to These Terms</h2>
+      <h2 class="zh">八、协议变更</h2>
+      <h2 class="en">8. Changes to These Terms</h2>
       <p class="zh">我们可能根据产品与法规变化适时更新本协议，更新后的条款将在本页面发布并标注新的更新日期。继续使用本应用即视为接受更新后的条款。</p>
       <p class="en">We may update these terms from time to time. Revised terms will be posted on this page with a new date. Continued use of the App constitutes acceptance of the updated terms.</p>
-      <p class="updated zh">最后更新：2026 年 9 月 11 日</p>
-      <p class="updated en">Last updated: September 11, 2026</p>
+      <p class="updated zh">最后更新：2026 年 11 月 2 日</p>
+      <p class="updated en">Last updated: November 2, 2026</p>
     </section>
 
     <section class="card">
-      <h2 class="zh">八、联系我们</h2>
-      <h2 class="en">8. Contact Us</h2>
+      <h2 class="zh">九、联系我们</h2>
+      <h2 class="en">9. Contact Us</h2>
       <p class="zh">如对本协议有任何疑问，请发送邮件至：<a href="mailto:455647783@qq.com">455647783@qq.com</a>。</p>
       <p class="en">If you have any questions about these terms, email us at <a href="mailto:455647783@qq.com">455647783@qq.com</a>.</p>
     </section>
